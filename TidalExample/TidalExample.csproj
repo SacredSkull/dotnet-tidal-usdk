@@ -10,4 +10,14 @@
       <ProjectReference Include="..\TidalUSDK\TidalUSDK.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="tidal-auth.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
