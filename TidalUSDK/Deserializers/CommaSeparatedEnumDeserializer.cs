@@ -2,11 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using TidalUSDK.Enums;
 
-namespace TidalUSDK.Serializers {
-    public class CommaSeparatedEnumSerializer : JsonConverter<IEnumerable<CommaSeparatedStringEnum>> {
+namespace TidalUSDK.Deserializers {
+    public class CommaSeparatedEnumDeserializer : JsonConverter<IEnumerable<CommaSeparatedStringEnum>> {
         public override void WriteJson(JsonWriter writer, IEnumerable<CommaSeparatedStringEnum> value, JsonSerializer serializer) {
             var buffer = value.Aggregate("", (current, val) => current + $"{val},");
             buffer = buffer.Trim(',');

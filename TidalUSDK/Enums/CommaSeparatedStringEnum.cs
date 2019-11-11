@@ -1,5 +1,4 @@
 using Newtonsoft.Json;
-using TidalUSDK.Serializers;
 
 namespace TidalUSDK.Enums {
     public abstract class CommaSeparatedStringEnum : StringEnum {

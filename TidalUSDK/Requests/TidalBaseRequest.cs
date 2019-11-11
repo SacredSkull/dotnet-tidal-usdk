@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using TidalUSDK.Enums;
-using TidalUSDK.Serializers;
 
 namespace TidalUSDK.Requests {
     public abstract class TidalBaseRequest {

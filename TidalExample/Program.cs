@@ -6,8 +6,10 @@ using Newtonsoft.Json.Linq;
 using TidalUSDK;
 using TidalUSDK.Enums;
 
-namespace TidalTest {
-    class Program {
+namespace TidalTest
+{
+    class Program
+    {
         static async Task Main(string[] args)
         {
             string strConf = "";
@@ -22,17 +24,23 @@ namespace TidalTest {
                 return;
             }
 
-            dynamic conf = JObject.Parse(strConf);
-            if (string.IsNullOrWhiteSpace(conf.username.ToString()) ||
-                string.IsNullOrWhiteSpace(conf.password.ToString())) {
-                Console.WriteLine("The config for TIDAL auth does not appear to be correct.");
-                return;
+            TidalConnection tidalConnection;
+
+            {
+                dynamic conf = JObject.Parse(strConf);
+
+                if (string.IsNullOrWhiteSpace(conf.username.ToString()) ||
+                    string.IsNullOrWhiteSpace(conf.password.ToString()))
+                {
+                    Console.WriteLine("The config for TIDAL auth does not appear to be correct.");
+                    return;
+                }
+
+                tidalConnection = new TidalConnection(conf.username.ToString(), conf.password.ToString());
             }
 
-            TidalConnection tidalConnection = new TidalConnection(conf.username.ToString(), conf.password.ToString());
-
             var search = await tidalConnection.AsyncSearch(
-                "Dream",
+                "In the presence of enemies",
                 new[]
                 {
                     TidalQueryTypes.Artists,

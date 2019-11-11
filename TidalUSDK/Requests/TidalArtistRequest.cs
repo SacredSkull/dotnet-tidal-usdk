@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
+using TidalUSDK.Deserializers;
 using TidalUSDK.Enums;
-using TidalUSDK.Serializers;
 
 namespace TidalUSDK.Requests {
     public class TidalArtistRequest : TidalBaseRequest {
-        [JsonConverter(typeof(CommaSeparatedEnumSerializer))]
+        [JsonConverter(typeof(CommaSeparatedEnumDeserializer))]
         [JsonProperty("filter")]
         public IEnumerable<TidalFilterTypes> Filters { get; set; }
 

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using TidalUSDK.Deserializers;
 using TidalUSDK.Enums;
-using TidalUSDK.Serializers;
 
 namespace TidalUSDK.Requests {
     public class TidalSearchRequest : TidalBaseRequest {
@@ -9,7 +9,7 @@ namespace TidalUSDK.Requests {
         public string Query { get; set; }
         
         [JsonProperty("types")]
-        [JsonConverter(typeof(CommaSeparatedEnumSerializer))]
+        [JsonConverter(typeof(CommaSeparatedEnumDeserializer))]
         public IEnumerable<TidalQueryTypes> Types { get; set; }
     }
 }
