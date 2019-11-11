@@ -1,0 +1,40 @@
+{
+  "value": {
+    "id": 2918123,
+    "title": "The Count Of Tuscany",
+    "duration": 1157,
+    "replayGain": -11.57,
+    "peak": 1.0,
+    "allowStreaming": true,
+    "streamReady": true,
+    "streamStartDate": "2009-09-22T01:00:00+01:00",
+    "premiumStreamingOnly": false,
+    "trackNumber": 6,
+    "volumeNumber": 1,
+    "version": null,
+    "popularity": 7,
+    "copyright": "2009 The All Blacks B.V. Issued under license to Roadrunner Records from The All Blacks B.V. Roadrunner Records is a registered trademark of The All Blacks B.V.",
+    "url": "http://www.tidal.com/track/2918123",
+    "isrc": "NLA320988727",
+    "editable": false,
+    "explicit": false,
+    "audioQuality": "LOSSLESS",
+    "audioModes": [
+      "STEREO"
+    ],
+    "artists": [
+      {
+        "id": 14670,
+        "name": "Dream Theater",
+        "type": "MAIN"
+      }
+    ],
+    "album": {
+      "id": 2918117,
+      "title": "Black Clouds & Silver Linings",
+      "cover": "39b5fd6f-420c-4b51-8c88-addbae837603",
+      "releaseDate": "2009-06-19"
+    }
+  },
+  "type": "TRACKS"
+}

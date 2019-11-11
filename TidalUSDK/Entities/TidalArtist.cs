@@ -17,7 +17,7 @@ namespace TidalUSDK.Entities {
         public string Url { get; set; }
         
         [JsonProperty("picture")]
-        public Guid Image { get; set; }
+        public Guid? Image { get; set; }
         
         [JsonProperty("popularity")]
         public int Popularity { get; set; }

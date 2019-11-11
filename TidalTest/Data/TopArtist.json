@@ -1,0 +1,16 @@
+{
+
+    "value":{
+        "id":14123,
+        "name":"Linkin Park",
+        "artistTypes":[
+            "ARTIST",
+            "CONTRIBUTOR"
+        ],
+        "url":"http://www.tidal.com/artist/14123",
+        "picture":"b9b404ce-7d66-40c0-baa2-7e1664b959e8",
+        "popularity":75
+    },
+    "type":"ARTISTS"
+
+}

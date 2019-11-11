@@ -1,0 +1,37 @@
+{
+
+    "value":{
+        "id":117047825,
+        "title":"Violence",
+        "volumeNumber":1,
+        "trackNumber":1,
+        "releaseDate":"2019-09-04T01:00:00+01:00",
+        "imagePath":null,
+        "imageId":"1cf264b9-bfd0-408a-b468-0a9ffd6873ec",
+        "duration":229,
+        "quality":"MP4_1080P",
+        "streamReady":true,
+        "streamStartDate":"2019-09-05T09:00:00+01:00",
+        "allowStreaming":true,
+        "explicit":false,
+        "popularity":11,
+        "type":"Music Video",
+        "adsUrl":null,
+        "adsPrePaywallOnly":true,
+        "artists":[
+            {
+                "id":3819688,
+                "name":"Grimes",
+                "type":"MAIN"
+            },
+            {
+                "id":9312817,
+                "name":"i_o",
+                "type":"MAIN"
+            }
+        ],
+        "album":null
+    },
+    "type":"VIDEOS"
+
+}

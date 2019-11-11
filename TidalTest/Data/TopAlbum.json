@@ -1,0 +1,37 @@
+{
+
+    "value":{
+        "id":406460,
+        "title":"Minutes to Midnight",
+        "duration":2609,
+        "streamReady":true,
+        "streamStartDate":"2013-01-16T00:00:00+00:00",
+        "allowStreaming":true,
+        "premiumStreamingOnly":false,
+        "numberOfTracks":12,
+        "numberOfVideos":0,
+        "numberOfVolumes":1,
+        "releaseDate":"2007-05-14",
+        "copyright":"2007 Warner Records Inc.",
+        "type":"ALBUM",
+        "version":null,
+        "url":"http://www.tidal.com/album/406460",
+        "cover":"446d2462-2a68-47eb-bb10-fc376f9fd51b",
+        "explicit":true,
+        "upc":"093624447764",
+        "popularity":55,
+        "audioQuality":"LOSSLESS",
+        "audioModes":[
+            "STEREO"
+        ],
+        "artists":[
+            {
+                "id":14123,
+                "name":"Linkin Park",
+                "type":"MAIN"
+            }
+        ]
+    },
+    "type":"ALBUMS"
+
+}
