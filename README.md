@@ -1,3 +1,5 @@
+![Build status](https://github.com/SacredSkull/dotnet-tidal-usdk/workflows/dotnet/badge.svg)
+
 # .NET Core Tidal Unofficial SDK
 This library aims to enable developers to write applications (e.g. media clients) that interact with _TIDAL_, providing audio stream URIs, metadata, etc.
 

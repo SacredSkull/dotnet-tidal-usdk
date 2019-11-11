@@ -13,7 +13,7 @@ jobs:
         dotnet-version: 2.2.108
     - name: Build with dotnet
       run: dotnet build --configuration Release
-        - name: Unit Tests
+    - name: Unit Tests
       run: dotnet test
   test:
     needs: [build]
