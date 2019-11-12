@@ -12,20 +12,9 @@ jobs:
     - uses: actions/checkout@v1
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
-    - name: Fetch all tags and reflog for master/develop
-      run: |
-        git fetch --tags
-        git branch --create-reflog master origin/master
-        git branch --create-reflog master origin/develop
-    - name: Compute GitVersion
-      uses: docker://gittools/gitversion:5.0.2-beta1-27-linux-centos-7-netcoreapp2.2
-      with:
-        args: /github/workspace /nofetch /exec /bin/sh /execargs "-c \"echo $GitVersion_FullSemVer > /github/workspace/version.txt\""
-    - name: Report new version
-      run: cat version.txt
     - name: Pack release
-      run: NUGET_VER=$(cat version.txt) dotnet pack -c Release SacredSkull.TidalUSDK /p:Version=$NUGET_VER
+      run: dotnet pack -c Release SacredSkull.TidalUSDKR
     - name: Publish NuGet
-      run: NUGET_PKG="SacredSkull.TidalUSDK.$(cat version.txt).nupkg" dotnet nuget push SacredSkull.TidalUSDK/bin/Release/$NUGET_PKG -k $nuget_api_key https://api.nuget.org/v3/index.json
+      run: cd SacredSkull.TidalUSDK/bin/Release/ && for pkg in *.nupkg; do dotnet nuget push $i -k $pkg https://api.nuget.org/v3/index.json; done
       env:
         nuget_api_key: ${{ secrets.NugetApiKey }}
