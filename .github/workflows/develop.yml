@@ -27,6 +27,7 @@ jobs:
       run: cd SacredSkull.TidalUSDK/bin/Release/ && for pkg in *.nupkg; do dotnet nuget push $pkg -k $nuget_api_key https://api.nuget.org/v3/index.json; done
       env:
         nuget_api_key: ${{ secrets.NugetApiKey }}
+
   test-windows:
     needs: [build-test-release-ubuntu]
     strategy:
