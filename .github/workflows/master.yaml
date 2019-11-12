@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -15,6 +15,6 @@ jobs:
     - name: Pack release
       run: dotnet pack -c Release SacredSkull.TidalUSDKR
     - name: Publish NuGet
-      run: cd SacredSkull.TidalUSDK/bin/Release/ && for pkg in *.nupkg; do dotnet nuget push $i -k $pkg https://api.nuget.org/v3/index.json; done
+      run: cd SacredSkull.TidalUSDK/bin/Release/ && for pkg in *.nupkg; do dotnet nuget push $pkg -k $pkg https://api.nuget.org/v3/index.json; done
       env:
         nuget_api_key: ${{ secrets.NugetApiKey }}

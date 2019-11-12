@@ -1,4 +1,4 @@
-name: develop-build
+name: develop
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - develop
 
 jobs:
-  build-test-ubuntu:
+  build-test-release-ubuntu:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,7 +24,7 @@ jobs:
         name: TidalUSDK-release
         path: SacredSkull.TidalUSDK/bin/Release/
     - name: Publish NuGet
-      run: cd SacredSkull.TidalUSDK/bin/Release/ && for pkg in *.nupkg; do dotnet nuget push $i -k $pkg https://api.nuget.org/v3/index.json; done
+      run: cd SacredSkull.TidalUSDK/bin/Release/ && for pkg in *.nupkg; do dotnet nuget push $pkg -k $pkg https://api.nuget.org/v3/index.json; done
       env:
         nuget_api_key: ${{ secrets.NugetApiKey }}
   test-windows:
