@@ -20,7 +20,7 @@ jobs:
     - name: Update version in nuspec
       run: sed -e "s/GITVERSION/$(cat version.txt)/" SacredSkull.TidalUSDK/SacredSkull.TidalUSDK.nuspec
     - name: Build with dotnet
-      run: dotnet build -c Release
+      run: dotnet build -c Release -v diag
     - name: Unit Tests
       run: dotnet test
     - name: Pack NuGet
