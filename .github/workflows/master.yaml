@@ -1,0 +1,20 @@
+name: master-release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+    - name: Pack NuGet
+      run: dotnet pack -c Release
+    - name: Publish NuGet
+      run: dotnet nuget push SacredSkull.TidalUSDK/bin/Release/*.nupkg -k $nuget_api_key https://api.nuget.org/v3/index.json
+      env:
+        nuget_api_key: ${{ secrets.NugetApiKey }}
