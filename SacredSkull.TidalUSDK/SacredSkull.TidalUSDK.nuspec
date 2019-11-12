@@ -1,13 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<?xml version="1.0"?>
+<package >
   <metadata>
-    <id>SacredSkull.TidalUSDK</id>
-    <version>1.0.0</version>
-    <title>SacredSkull.TidalUSDK</title>
-    <authors>SacredSkull.TidalUSDK</authors>
-    <owners>SacredSkull.TidalUSDK</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Description</description>
-    <dependencies />
+    <id>$id$</id>
+    <version>GITVERSION</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <description>$description$</description>
   </metadata>
 </package>

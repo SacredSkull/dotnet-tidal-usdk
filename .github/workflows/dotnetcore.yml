@@ -4,24 +4,34 @@ on: [push]
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 2.2.108
+    - name: Compute GitVersion
+      uses: docker://gittools/gitversion:5.0.2-beta1-27-linux-centos-7-netcoreapp2.2
+      with:
+        args: /github/workspace /nofetch /exec /bin/sh /execargs "-c \"echo $GitVersion_FullSemVer > /github/workspace/version.txt\""
+    - name: Update version in nuspec
+      run: sed -e "s/GITVERSION/$(cat /github/workspace/version.txt)/" /github/workspace/SacredSkull.TidalUSDK/SacredSkull.TidalUSDK.nuspec
     - name: Build with dotnet
-      run: dotnet build --configuration Release
+      run: dotnet build -c Release
     - name: Unit Tests
       run: dotnet test
-    - name: use-gitversion
-      uses: GitTools/use-gitversion@v0.3
+    - name: Pack NuGet
+      run: dotnet pack -c Release
+    - uses: actions/upload-artifact@master
+      with:
+        name: TidalUSDK-release
+        path: /github/workspace/SacredSkull.TidalUSDK/bin/Release/
   test:
     needs: [build]
     strategy:
       matrix:
-        platform: [ubuntu-latest]
+        platform: [windows-latest]
     runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v1
