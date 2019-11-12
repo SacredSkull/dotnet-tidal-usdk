@@ -16,10 +16,13 @@ jobs:
       run: |
         git fetch --tags
         git branch --create-reflog master origin/master
+        git branch --create-reflog master origin/develop
     - name: Compute GitVersion
       uses: docker://gittools/gitversion:5.0.2-beta1-27-linux-centos-7-netcoreapp2.2
       with:
         args: /github/workspace /nofetch /exec /bin/sh /execargs "-c \"echo $GitVersion_FullSemVer > /github/workspace/version.txt\""
+    - name: Report new version
+      run: cat version.txt
     - name: Pack release
       run: NUGET_VER=$(cat version.txt) dotnet pack -c Release SacredSkull.TidalUSDK /p:Version=$NUGET_VER
     - name: Publish NuGet
