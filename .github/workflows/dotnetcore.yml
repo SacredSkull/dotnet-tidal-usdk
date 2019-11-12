@@ -1,16 +1,24 @@
-name: dotnet
+name: develop-build
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
+      - develop
 
 jobs:
-  build:
+  build-test-ubuntu:
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v1
+    - name: Fetch all tags and reflog for master/develop
+      run: |
+        git fetch --tags
+        git branch --create-reflog master origin/master
+        git branch --create-reflog develop origin/develop
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 2.2.108
     - name: Compute GitVersion
       uses: docker://gittools/gitversion:5.0.2-beta1-27-linux-centos-7-netcoreapp2.2
       with:
@@ -18,7 +26,7 @@ jobs:
     - name: Update version in nuspec
       run: sed -e "s/GITVERSION/$(cat version.txt)/" SacredSkull.TidalUSDK/SacredSkull.TidalUSDK.nuspec
     - name: Build with dotnet
-      run: dotnet build -c Release -v detailed
+      run: dotnet build -c Release -v minimal
     - name: Unit Tests
       run: dotnet test
     - name: Pack NuGet
@@ -27,8 +35,8 @@ jobs:
       with:
         name: TidalUSDK-release
         path: SacredSkull.TidalUSDK/bin/Release/
-  test:
-    needs: [build]
+  test-windows:
+    needs: [build-test-ubuntu]
     strategy:
       matrix:
         platform: [windows-latest]
@@ -39,5 +47,5 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 2.2.108
-    - name: Unit Tests
+    - name: Unit tests
       run: dotnet test
