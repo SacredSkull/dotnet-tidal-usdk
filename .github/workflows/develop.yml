@@ -28,7 +28,7 @@ jobs:
       env:
         nuget_api_key: ${{ secrets.NugetApiKey }}
   test-windows:
-    needs: [build-test-ubuntu]
+    needs: [build-test-release-ubuntu]
     strategy:
       matrix:
         platform: [windows-latest]
