@@ -2,7 +2,6 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp2.2</TargetFramework>
         <LangVersion>default</LangVersion>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Title>TIDAL.NET Core (U)SDK</Title>
         <Description>Unofficial .NET Core SDK for the TIDAL streaming service</Description>
         <Copyright>Peter Clotworthy 2019</Copyright>
@@ -18,6 +17,6 @@
         <PackageReference Include="Flurl" Version="2.8.2" />
         <PackageReference Include="Flurl.Http" Version="2.4.2" />
         <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta2-19554-01" PrivateAssets="All"/>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta2-19554-01" PrivateAssets="All" />
     </ItemGroup>
 </Project>

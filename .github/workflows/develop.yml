@@ -28,14 +28,14 @@ jobs:
       run: dotnet build -c Release -v minimal
     - name: Unit Tests
       run: dotnet test
-    - name: Pack NuGet
-      run: dotnet pack -c Release
+    - name: Pack release
+      run: NUGET_VER=$(cat version.txt) dotnet pack -c Release SacredSkull.TidalUSDK /p:Version=$NUGET_VER
     - uses: actions/upload-artifact@master
       with:
         name: TidalUSDK-release
         path: SacredSkull.TidalUSDK/bin/Release/
     - name: Publish NuGet
-      run: dotnet nuget push SacredSkull.TidalUSDK/bin/Release/*.nupkg -k $nuget_api_key https://api.nuget.org/v3/index.json
+      run: NUGET_PKG="SacredSkull.TidalUSDK.$(cat version.txt).nupkg" dotnet nuget push SacredSkull.TidalUSDK/bin/Release/$NUGET_PKG -k $nuget_api_key https://api.nuget.org/v3/index.json
       env:
         nuget_api_key: ${{ secrets.NugetApiKey }}
   test-windows:
