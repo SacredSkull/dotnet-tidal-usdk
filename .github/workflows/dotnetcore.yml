@@ -7,7 +7,7 @@ on:
       - develop
 
 jobs:
-  build:
+  build-test-ubuntu:
     runs-on: ubuntu-latest
 
     steps:
@@ -38,7 +38,7 @@ jobs:
         name: TidalUSDK-release
         path: SacredSkull.TidalUSDK/bin/Release/
   test-windows:
-    needs: [build]
+    needs: [build-test-ubuntu]
     strategy:
       matrix:
         platform: [windows-latest]
