@@ -8,10 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\TidalUSDK\TidalUSDK.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     </ItemGroup>
 
@@ -19,6 +15,10 @@
       <None Update="tidal-auth.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SacredSkull.TidalUSDK\SacredSkull.TidalUSDK.csproj" />
     </ItemGroup>
 
 </Project>

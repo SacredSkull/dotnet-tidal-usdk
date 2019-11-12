@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TidalUSDK", "TidalUSDK\TidalUSDK.csproj", "{3D85974D-E065-47EB-A9D5-3935F63D3452}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SacredSkull.TidalUSDK", "SacredSkull.TidalUSDK\SacredSkull.TidalUSDK.csproj", "{3D85974D-E065-47EB-A9D5-3935F63D3452}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TidalExample", "TidalExample\TidalExample.csproj", "{3168D343-C763-4C05-9A33-46E0792131D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TidalTest", "TidalTest\TidalTest.csproj", "{669D349B-1AAF-4EAD-B80E-18C37794680D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SacredSkull.TidalTest", "SacredSkull.TidalTest\SacredSkull.TidalTest.csproj", "{669D349B-1AAF-4EAD-B80E-18C37794680D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

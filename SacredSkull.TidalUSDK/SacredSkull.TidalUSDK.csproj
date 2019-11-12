@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <LangVersion>default</LangVersion>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>TIDAL.NET Core (U)SDK</Title>
+        <Description>Unofficial .NET Core SDK for the TIDAL streaming service</Description>
+        <Copyright>Peter Clotworthy 2019</Copyright>
+        <PackageProjectUrl>https://raw.githubusercontent.com/SacredSkull/dotnet-tidal-usdk</PackageProjectUrl>
+        <RepositoryUrl>https://raw.githubusercontent.com/SacredSkull/dotnet-tidal-usdk</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Flurl" Version="2.8.2" />
+      <PackageReference Include="Flurl.Http" Version="2.4.2" />
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    </ItemGroup>
+</Project>

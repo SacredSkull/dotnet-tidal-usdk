@@ -3,8 +3,8 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
-using TidalUSDK;
-using TidalUSDK.Enums;
+using SacredSkull.TidalUSDK;
+using SacredSkull.TidalUSDK.Enums;
 
 namespace TidalTest
 {
@@ -49,7 +49,7 @@ namespace TidalTest
                 },
                 5);
 
-            var artist = await tidalConnection.AsyncGetArtist("14670", new[] {TidalFilterTypes.All});
+            var artist = await tidalConnection.AsyncGetArtist("14670", new[] { TidalFilterTypes.All });
             var artistBio = await tidalConnection.AsyncGetArtistBio("14670");
             var artistTopTen = await tidalConnection.AsyncGetArtistTopTracks("14670", new[] {TidalFilterTypes.All});
         }
