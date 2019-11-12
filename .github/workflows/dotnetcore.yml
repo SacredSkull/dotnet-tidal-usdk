@@ -16,9 +16,9 @@ jobs:
       with:
         args: /github/workspace /nofetch /exec /bin/sh /execargs "-c \"echo $GitVersion_FullSemVer > /github/workspace/version.txt\""
     - name: DEBUG
-      run: cd /github/workspace && find "$PWD" -type f
+      run: find "$PWD" -type f
     - name: Update version in nuspec
-      run: sed -e "s/GITVERSION/$(cat /github/workspace/version.txt)/" /github/workspace/SacredSkull.TidalUSDK/SacredSkull.TidalUSDK.nuspec
+      run: sed -e "s/GITVERSION/$(cat version.txt)/" SacredSkull.TidalUSDK/SacredSkull.TidalUSDK.nuspec
     - name: Build with dotnet
       run: dotnet build -c Release
     - name: Unit Tests
@@ -28,7 +28,7 @@ jobs:
     - uses: actions/upload-artifact@master
       with:
         name: TidalUSDK-release
-        path: /github/workspace/SacredSkull.TidalUSDK/bin/Release/
+        path: SacredSkull.TidalUSDK/bin/Release/
   test:
     needs: [build]
     strategy:
