@@ -10,7 +10,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
     - name: Build
-      run: dotnet build -p:langversion=7.3 -c Release -v minimal
+      run: dotnet build -c Release -v minimal
     - name: Unit tests
       run: dotnet test
   test-windows:
