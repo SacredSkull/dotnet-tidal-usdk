@@ -1,25 +1,22 @@
-using System.Collections.Generic;
 using Newtonsoft.Json;
-using SacredSkull.TidalUSDK.Enums;
 
-namespace SacredSkull.TidalUSDK.Requests {
-    public abstract class TidalBaseRequest {
+namespace SacredSkull.TidalUSDK.Requests
+{
+    public class TidalBaseRequest : TidalRequest
+    {
         [JsonProperty("limit", NullValueHandling = NullValueHandling.Ignore)]
         public int Limit { get; set; }
-        
+
         [JsonProperty("offset", NullValueHandling = NullValueHandling.Ignore)]
         public int Offset { get; set; }
 
-        [JsonProperty("countryCode")]
-        public string CountryCode { get; set; }
+        public override void SetDefaults(string countryCode)
+        {
+            base.SetDefaults(countryCode);
 
-        public virtual void SetDefaults(string countryCode) {
-            if (this.CountryCode == null) {
-                this.CountryCode = countryCode;
-            }
-
-            if (this.Limit < 1) {
-                this.Limit = 999;
+            if (Limit < 1)
+            {
+                Limit = 999;
             }
         }
     }

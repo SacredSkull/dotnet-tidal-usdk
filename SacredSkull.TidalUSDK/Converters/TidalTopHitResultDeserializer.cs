@@ -1,16 +1,16 @@
 using System;
-using System.Dynamic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SacredSkull.TidalUSDK.Entities;
 using SacredSkull.TidalUSDK.Enums;
 using SacredSkull.TidalUSDK.Extensions;
 
-namespace SacredSkull.TidalUSDK.Deserializers
+namespace SacredSkull.TidalUSDK.Converters
 {
     /// <summary>
-    /// TopHitResults are complex since they return a type and value property - so, we have to implement more complex logic to handle it
-    /// (the actual class is more complex too, such as throwing exceptions if you try to access the incorrect property.
+    ///     TopHitResults are complex since they return a type and value property - so, we have to implement more complex logic
+    ///     to handle it
+    ///     (the actual class is more complex too, such as throwing exceptions if you try to access the incorrect property.
     /// </summary>
     internal class TidalTopHitResultDeserializer : JsonConverter<TidalTopHit>
     {
@@ -19,7 +19,8 @@ namespace SacredSkull.TidalUSDK.Deserializers
             throw new NotImplementedException();
         }
 
-        public override TidalTopHit ReadJson(JsonReader reader, Type objectType, TidalTopHit existingValue, bool hasExistingValue, JsonSerializer serializer)
+        public override TidalTopHit ReadJson(JsonReader reader, Type objectType, TidalTopHit existingValue,
+            bool hasExistingValue, JsonSerializer serializer)
         {
             JObject token = JObject.Load(reader);
 
@@ -35,7 +36,8 @@ namespace SacredSkull.TidalUSDK.Deserializers
             // Attempt to convert the type property to our TidalResultType enum, if case fails, throw an exception.
             if (!Enum.TryParse(type.ToString(), true, out TidalResultTypes tidalResultType))
             {
-                throw new ArgumentOutOfRangeException($"Attempted to convert an unknown top hit type to a TopHit result object - (returned {type}). Please report this exception. {token}");
+                throw new ArgumentOutOfRangeException(
+                    $"Attempted to convert an unknown top hit type to a TopHit result object - (returned {type}). Please report this exception. {token}");
             }
 
             var topHit = new TidalTopHit
@@ -66,7 +68,6 @@ namespace SacredSkull.TidalUSDK.Deserializers
             }
 
             return topHit;
-
         }
     }
 }

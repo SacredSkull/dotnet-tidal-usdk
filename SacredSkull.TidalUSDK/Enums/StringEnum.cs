@@ -1,11 +1,21 @@
-namespace SacredSkull.TidalUSDK.Enums {
-    public abstract class StringEnum {
-        public string Value { get; }
-        
-        protected StringEnum(string val) {
-            this.Value = val;
+using Newtonsoft.Json;
+using SacredSkull.TidalUSDK.Converters;
+
+namespace SacredSkull.TidalUSDK.Enums
+{
+    [JsonConverter(typeof(StringEnumSerializer))]
+    public abstract class StringEnum
+    {
+        protected StringEnum(string val)
+        {
+            Value = val;
         }
 
-        public override string ToString() => this.Value;
+        public string Value { get; }
+
+        public override string ToString()
+        {
+            return Value;
+        }
     }
 }

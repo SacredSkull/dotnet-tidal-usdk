@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
@@ -40,18 +41,24 @@ namespace TidalTest
             }
 
             var search = await tidalConnection.AsyncSearch(
-                "In the presence of enemies",
+                "In the presence of enemies, pt. 1",
                 new[]
                 {
-                    TidalQueryTypes.Artists,
-                    TidalQueryTypes.Tracks, TidalQueryTypes.Albums,
-                    TidalQueryTypes.Playlists, TidalQueryTypes.Videos
+                    TidalQueryTypes.Tracks
                 },
                 5);
+            var trackId = search.Tracks.Last(track => track.Artists.Any(trackArtist => trackArtist.Type == "MAIN")).Id;
+            var trackInfo = await tidalConnection.AsyncGetTrack(trackId);
 
-            var artist = await tidalConnection.AsyncGetArtist("14670", new[] { TidalFilterTypes.All });
-            var artistBio = await tidalConnection.AsyncGetArtistBio("14670");
-            var artistTopTen = await tidalConnection.AsyncGetArtistTopTracks("14670", new[] {TidalFilterTypes.All});
+            /* Kind of distracting for TIDAL to pause your music while coding (since you're "playing" on more than one device at a time) */
+            //var trackStreamingURL = await tidalConnection.AsyncGetTrackStreamingURL(trackId, TidalStreamingQualityEnum.HIGH);
+            //var trackOfflineStreamingURL = await tidalConnection.AsyncGetTrackOfflineStreamingURL(trackId, TidalStreamingQualityEnum.HIGH);
+
+            var artistId = trackInfo.Artists.First().Id;
+            var artistVideos = await tidalConnection.AsyncGetArtistVideos(artistId);
+            var artist = await tidalConnection.AsyncGetArtist(artistId, new[] { TidalFilterTypes.All });
+            var artistBio = await tidalConnection.AsyncGetArtistBio(artistId);
+            var artistTopTen = await tidalConnection.AsyncGetArtistTopTracks(artistId, new[] { TidalFilterTypes.All });
         }
     }
 }

@@ -4,13 +4,20 @@ using System.Reflection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace SacredSkull.TidalUSDK.Utilities {
-    internal class JSONPathConverter : JsonConverter {
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer) {
+namespace SacredSkull.TidalUSDK.Utilities
+{
+    internal class JSONPathConverter : JsonConverter
+    {
+        public override bool CanWrite => false;
+
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue,
+            JsonSerializer serializer)
+        {
             JObject jo = JObject.Load(reader);
             object targetObj = Activator.CreateInstance(objectType);
 
-            foreach (PropertyInfo prop in objectType.GetProperties().Where(p => p.CanRead && p.CanWrite)) {
+            foreach (PropertyInfo prop in objectType.GetProperties().Where(p => p.CanRead && p.CanWrite))
+            {
                 JsonPropertyAttribute att = prop.GetCustomAttributes(true)
                     .OfType<JsonPropertyAttribute>()
                     .FirstOrDefault();
@@ -18,7 +25,8 @@ namespace SacredSkull.TidalUSDK.Utilities {
                 string jsonPath = att != null ? att.PropertyName : prop.Name;
                 JToken token = jo.SelectToken(jsonPath);
 
-                if (token != null && token.Type != JTokenType.Null) {
+                if (token != null && token.Type != JTokenType.Null)
+                {
                     object value = token.ToObject(prop.PropertyType, serializer);
                     prop.SetValue(targetObj, value, null);
                 }
@@ -28,11 +36,13 @@ namespace SacredSkull.TidalUSDK.Utilities {
         }
 
         // CanConvert is not called when [JsonConverter] attribute is used
-        public override bool CanConvert(Type objectType) => false;
+        public override bool CanConvert(Type objectType)
+        {
+            return false;
+        }
 
-        public override bool CanWrite => false;
-
-        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
             throw new NotImplementedException();
         }
     }

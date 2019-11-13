@@ -1,0 +1,43 @@
+{
+
+    "id":68574405,
+    "title":"In the Presence of Enemies, Pt. 1",
+    "duration":540,
+    "replayGain":-6.99,
+    "peak":0.992004,
+    "allowStreaming":true,
+    "streamReady":true,
+    "streamStartDate":"2014-06-02T00:00:00.000+0000",
+    "premiumStreamingOnly":false,
+    "trackNumber":1,
+    "volumeNumber":1,
+    "version":null,
+    "popularity":4,
+    "copyright":"2007 The All Blacks B.V. Issued under license to Roadrunner Records from the The All Blacks B.V.",
+    "url":"http://www.tidal.com/track/68574405",
+    "isrc":"NLA321392925",
+    "editable":false,
+    "explicit":false,
+    "audioQuality":"HI_RES",
+    "audioModes":[
+        "STEREO"
+    ],
+    "artist":{
+        "id":14670,
+        "name":"Dream Theater",
+        "type":"MAIN"
+    },
+    "artists":[
+        {
+            "id":14670,
+            "name":"Dream Theater",
+            "type":"MAIN"
+        }
+    ],
+    "album":{
+        "id":68574404,
+        "title":"Systematic Chaos",
+        "cover":"917750da-8637-4341-a9c1-8d411300c46e"
+    }
+
+}

@@ -1,25 +1,34 @@
 using System;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
-using SacredSkull.TidalUSDK.Deserializers;
+using SacredSkull.TidalUSDK.Converters;
 using SacredSkull.TidalUSDK.Enums;
 
-namespace SacredSkull.TidalUSDK.Entities {
+namespace SacredSkull.TidalUSDK.Entities
+{
     [JsonConverter(typeof(TidalTopHitResultDeserializer))]
     public class TidalTopHit
     {
+        private TidalAlbum _topAlbum;
+
+        private TidalArtist _topArtist;
+
+        private TidalPlaylist _topPlaylist;
+
+        private TidalTrack _topTrack;
+
+        private TidalVideo _topVideo;
+
         /// <summary>
-        /// This property will tell you the type of TopHit that was returned.
-        /// You MUST check this property to
+        ///     This property will tell you the type of TopHit that was returned.
+        ///     You MUST check this property to
         /// </summary>
         public TidalResultTypes Type { get; set; }
 
-        private TidalArtist _topArtist;
         public TidalArtist TopArtist
         {
             get
             {
-                if (this.Type != TidalResultTypes.ARTISTS)
+                if (Type != TidalResultTypes.ARTISTS)
                 {
                     AccessInvalidTopHit("Artists");
                 }
@@ -30,12 +39,11 @@ namespace SacredSkull.TidalUSDK.Entities {
             set => _topArtist = value;
         }
 
-        private TidalAlbum _topAlbum;
         public TidalAlbum TopAlbum
         {
             get
             {
-                if (this.Type != TidalResultTypes.ALBUMS)
+                if (Type != TidalResultTypes.ALBUMS)
                 {
                     AccessInvalidTopHit("Albums");
                 }
@@ -46,12 +54,11 @@ namespace SacredSkull.TidalUSDK.Entities {
             set => _topAlbum = value;
         }
 
-        private TidalPlaylist _topPlaylist;
         public TidalPlaylist TopPlaylist
         {
             get
             {
-                if (this.Type != TidalResultTypes.PLAYLISTS)
+                if (Type != TidalResultTypes.PLAYLISTS)
                 {
                     AccessInvalidTopHit("Playlists");
                 }
@@ -62,12 +69,11 @@ namespace SacredSkull.TidalUSDK.Entities {
             set => _topPlaylist = value;
         }
 
-        private TidalTrack _topTrack;
         public TidalTrack TopTrack
         {
             get
             {
-                if (this.Type != TidalResultTypes.TRACKS)
+                if (Type != TidalResultTypes.TRACKS)
                 {
                     AccessInvalidTopHit("Tracks");
                 }
@@ -77,12 +83,11 @@ namespace SacredSkull.TidalUSDK.Entities {
             set => _topTrack = value;
         }
 
-        private TidalVideo _topVideo;
         public TidalVideo TopVideo
         {
             get
             {
-                if (this.Type != TidalResultTypes.VIDEOS)
+                if (Type != TidalResultTypes.VIDEOS)
                 {
                     AccessInvalidTopHit("Videos");
                 }
@@ -96,9 +101,9 @@ namespace SacredSkull.TidalUSDK.Entities {
         {
             throw new InvalidOperationException(
                 $"You tried to read property {property}, " +
-                $"but this wasn't the type of top hit returned. " +
-                $"Use the Type property to make sure you use the correct parameter, " +
-                $"or access ");
+                "but this wasn't the type of top hit returned. " +
+                "Use the Type property to make sure you use the correct parameter, " +
+                "or access ");
         }
     }
 }

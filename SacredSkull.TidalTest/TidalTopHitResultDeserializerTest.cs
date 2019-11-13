@@ -2,7 +2,6 @@ using Moq;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using SacredSkull.TidalTest.Enums;
-using SacredSkull.TidalUSDK.Deserializers;
 using SacredSkull.TidalUSDK.Entities;
 using SacredSkull.TidalUSDK.Enums;
 
