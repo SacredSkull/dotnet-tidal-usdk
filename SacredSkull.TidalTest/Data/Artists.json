@@ -1,0 +1,94 @@
+{
+
+    "limit":50,
+    "offset":0,
+    "totalNumberOfItems":6,
+    "items":[
+        {
+            "id":3888179,
+            "name":"Liquid Tension Experiment",
+            "type":null,
+            "artistTypes":[
+                "ARTIST",
+                "CONTRIBUTOR"
+            ],
+            "url":"http://www.tidal.com/artist/3888179",
+            "picture":"30b5106a-3709-42bd-beb0-a45a963c6190",
+            "popularity":0,
+            "banner":null,
+            "relationType":"SIMILAR_ARTIST"
+        },
+        {
+            "id":3170,
+            "name":"John Petrucci",
+            "type":null,
+            "artistTypes":[
+                "ARTIST",
+                "CONTRIBUTOR"
+            ],
+            "url":"http://www.tidal.com/artist/3170",
+            "picture":"328ee019-e9b4-409e-9eba-bbc5dc0b8b51",
+            "popularity":0,
+            "banner":null,
+            "relationType":"SIMILAR_ARTIST"
+        },
+        {
+            "id":3619469,
+            "name":"Jordan Rudess",
+            "type":null,
+            "artistTypes":[
+                "ARTIST",
+                "CONTRIBUTOR"
+            ],
+            "url":"http://www.tidal.com/artist/3619469",
+            "picture":"5339b3f7-06ea-4266-acbe-c162fe4d7566",
+            "popularity":0,
+            "banner":null,
+            "relationType":"SIMILAR_ARTIST"
+        },
+        {
+            "id":3659738,
+            "name":"Derek Sherinian",
+            "type":null,
+            "artistTypes":[
+                "ARTIST",
+                "CONTRIBUTOR"
+            ],
+            "url":"http://www.tidal.com/artist/3659738",
+            "picture":"af8b52c3-9b03-4300-806c-6006078e313b",
+            "popularity":0,
+            "banner":null,
+            "relationType":"SIMILAR_ARTIST"
+        },
+        {
+            "id":3659750,
+            "name":"James Labrie",
+            "type":null,
+            "artistTypes":[
+                "ARTIST",
+                "CONTRIBUTOR"
+            ],
+            "url":"http://www.tidal.com/artist/3659750",
+            "picture":"81af66bf-c277-468a-a7ff-1d478ab88ce4",
+            "popularity":0,
+            "banner":null,
+            "relationType":"SIMILAR_ARTIST"
+        },
+        {
+            "id":3888178,
+            "name":"Liquid Trio Experiment",
+            "type":null,
+            "artistTypes":[
+                "ARTIST",
+                "CONTRIBUTOR"
+            ],
+            "url":"http://www.tidal.com/artist/3888178",
+            "picture":"ffef0ac6-8f6d-481c-bf3d-b4eb4c79a6c9",
+            "popularity":0,
+            "banner":null,
+            "relationType":"SIMILAR_ARTIST"
+        }
+    ],
+    "source":"TIDAL"
+
+}

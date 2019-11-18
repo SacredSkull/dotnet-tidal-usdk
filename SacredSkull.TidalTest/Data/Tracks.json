@@ -1,0 +1,1987 @@
+{
+
+    "limit":999,
+    "offset":0,
+    "totalNumberOfItems":46,
+    "items":[
+        {
+            "id":1844737,
+            "title":"Scene Seven: I. The Dance of Eternity",
+            "duration":374,
+            "replayGain":-10.31,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-11-24T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":9,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":5,
+            "copyright":"1999 Elektra Entertainment Group Inc. for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1844737",
+            "isrc":"USEW19900324",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1844728,
+                "title":"Metropolis, Pt. 2: Scenes from a Memory",
+                "cover":"52dd1664-8ffe-40c8-80c6-895347b7a67e",
+                "releaseDate":"1999-01-01"
+            }
+        },
+        {
+            "id":22560690,
+            "title":"The Enemy Inside",
+            "duration":377,
+            "replayGain":-12.17,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2013-09-23T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":2,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":10,
+            "copyright":"2013 Roadrunner Records, Inc.",
+            "description":null,
+            "url":"http://www.tidal.com/track/22560690",
+            "isrc":"NLA321392677",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":22560688,
+                "title":"Dream Theater",
+                "cover":"e35a2ed2-dace-4e92-83cb-bcfc4beacd29",
+                "releaseDate":"2013-09-24"
+            }
+        },
+        {
+            "id":1844731,
+            "title":"Scene Two: II. Strange Déjà Vu",
+            "duration":312,
+            "replayGain":-10.31,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-11-24T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":3,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":4,
+            "copyright":"1999 Elektra Entertainment Group Inc. for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1844731",
+            "isrc":"USEW19900318",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1844728,
+                "title":"Metropolis, Pt. 2: Scenes from a Memory",
+                "cover":"52dd1664-8ffe-40c8-80c6-895347b7a67e",
+                "releaseDate":"1999-01-01"
+            }
+        },
+        {
+            "id":398574,
+            "title":"Trial of Tears - I. It's Raining / II. Deep in Heaven / III. The Wasteland",
+            "duration":785,
+            "replayGain":-11.72,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2015-06-05T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":11,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":3,
+            "copyright":"1997 Elektra Entertainment Group, A Division of Warner Communications Inc. for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/398574",
+            "isrc":"USEW19794554",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":398563,
+                "title":"Falling into Infinity",
+                "cover":"fa021ff6-56a2-44db-a0df-64d503000b08",
+                "releaseDate":"1997-09-12"
+            }
+        },
+        {
+            "id":56537587,
+            "title":"Moment of Betrayal",
+            "duration":371,
+            "replayGain":-9.37,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-01-29T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":22,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":4,
+            "copyright":"2015 Roadrunner Records, Inc.",
+            "description":null,
+            "url":"http://www.tidal.com/track/56537587",
+            "isrc":"NLA321500283",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":56537565,
+                "title":"The Astonishing",
+                "cover":"1bbb5c41-f489-4b48-bcc1-81949bffba66",
+                "releaseDate":"2016-01-29"
+            }
+        },
+        {
+            "id":1844833,
+            "title":"VI. Solitary Shell",
+            "duration":348,
+            "replayGain":-10.21,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2015-06-05T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":11,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":2,
+            "copyright":"2002 Elektra Entertainment for the United States and WEA International Inc. for the world outside of the United States. 2",
+            "description":null,
+            "url":"http://www.tidal.com/track/1844833",
+            "isrc":"USEE10140482",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1844822,
+                "title":"Six Degrees of Inner Turbulence",
+                "cover":"96f6d2ce-456b-4833-b867-992a8c9d9d99",
+                "releaseDate":"2002-01-22"
+            }
+        },
+        {
+            "id":1845527,
+            "title":"Learning to Live",
+            "duration":690,
+            "replayGain":-5.68,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2015-06-05T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":8,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":7,
+            "copyright":"1992 Atlantic Recording Corporation for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1845527",
+            "isrc":"USEE10180258",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1845519,
+                "title":"Images and Words",
+                "cover":"37fa3f1a-398d-426c-9953-8da843401dc9",
+                "releaseDate":"1992-06-30"
+            }
+        },
+        {
+            "id":701906,
+            "title":"In the Presence of Enemies, Pt. 1",
+            "duration":540,
+            "replayGain":-11.75,
+            "peak":0.988556,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2008-12-01T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":1,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":4,
+            "copyright":"2007 The All Blacks B.V. Issued under license to Roadrunner Records from the The All Blacks B.V.",
+            "description":null,
+            "url":"http://www.tidal.com/track/701906",
+            "isrc":"NLA320784228",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":701905,
+                "title":"Systematic Chaos",
+                "cover":"80eae885-aa9d-43fd-b656-ac911ff64efa",
+                "releaseDate":"2007-06-04"
+            }
+        },
+        {
+            "id":255811,
+            "title":"As I Am",
+            "duration":468,
+            "replayGain":-10.63,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2015-06-05T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":1,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":4,
+            "copyright":"2003 Elektra Entertainment Group Inc. for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/255811",
+            "isrc":"USEE10340685",
+            "editable":false,
+            "explicit":true,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":255810,
+                "title":"Train of Thought",
+                "cover":"b335e800-09bb-42d7-afda-07c5c3b3d849",
+                "releaseDate":"2003-11-10"
+            }
+        },
+        {
+            "id":1845515,
+            "title":"Lie",
+            "duration":394,
+            "replayGain":-8.72,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-11-25T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":8,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":3,
+            "copyright":"1994 Atlantic Recording Corporation for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1845515",
+            "isrc":"USEW29400072",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1845507,
+                "title":"Awake",
+                "cover":"e662ddc6-8b57-4dc4-982e-4bba80fcf07e",
+                "releaseDate":"1994-10-03"
+            }
+        },
+        {
+            "id":292086,
+            "title":"These Walls",
+            "duration":420,
+            "replayGain":-11.05,
+            "peak":0.999084,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-11-25T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":3,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":6,
+            "copyright":"2005 Atlantic Recording Corp For the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/292086",
+            "isrc":"USEE10500971",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":292083,
+                "title":"Octavarium",
+                "cover":"a524daa2-b04e-4466-b435-6f2a56312880",
+                "releaseDate":"2005-06-06"
+            }
+        },
+        {
+            "id":1845514,
+            "title":"The Mirror",
+            "duration":405,
+            "replayGain":-8.72,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-11-25T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":7,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":4,
+            "copyright":"1994 Atlantic Recording Corporation for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1845514",
+            "isrc":"USEW29400071",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1845507,
+                "title":"Awake",
+                "cover":"e662ddc6-8b57-4dc4-982e-4bba80fcf07e",
+                "releaseDate":"1994-10-03"
+            }
+        },
+        {
+            "id":1844681,
+            "title":"YTSE Jam (Live at Le Bataclan, Paris, France, 6/25/1998)",
+            "duration":250,
+            "replayGain":-10.39,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-11-24T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":11,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":2,
+            "copyright":"1998 Elektra Entertainment Group, A Division of Warner Communications Inc. for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1844681",
+            "isrc":"USEW19800205",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1844670,
+                "title":"Once in a Livetime",
+                "cover":"201bcb05-f230-463d-b1c9-60cfda9c22a9",
+                "releaseDate":"2006-01-01"
+            }
+        },
+        {
+            "id":255813,
+            "title":"Endless Sacrifice",
+            "duration":683,
+            "replayGain":-10.63,
+            "peak":0.999023,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2015-06-05T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":3,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":4,
+            "copyright":"2003 Elektra Entertainment Group Inc. for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/255813",
+            "isrc":"USEE10340687",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":255810,
+                "title":"Train of Thought",
+                "cover":"b335e800-09bb-42d7-afda-07c5c3b3d849",
+                "releaseDate":"2003-11-10"
+            }
+        },
+        {
+            "id":1658537,
+            "title":"The Root of All Evil",
+            "duration":436,
+            "replayGain":-11.3,
+            "peak":0.962188,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-11-12T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":10,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":1,
+            "copyright":"2008 Atlantic Recording Corp.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1658537",
+            "isrc":"USAT20706805",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1658527,
+                "title":"Greatest Hit (...and 21 Other Pretty Cool Songs)",
+                "cover":"1c615afa-6f23-4248-9eac-28b3920be18f",
+                "releaseDate":"2008-03-28"
+            }
+        },
+        {
+            "id":292338,
+            "title":"Only a Matter of Time (Live at Budokan Hall, Tokyo, Japan, 4/26/2004)",
+            "duration":441,
+            "replayGain":-10.96,
+            "peak":0.999969,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-11-25T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":12,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":2,
+            "copyright":"2004 Elektra Entertainment Group",
+            "description":null,
+            "url":"http://www.tidal.com/track/292338",
+            "isrc":"USEE10412822",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":292326,
+                "title":"Live at Budokan",
+                "cover":"bc067891-d357-47c5-88a9-905822ed7737",
+                "releaseDate":"2004-01-01"
+            }
+        },
+        {
+            "id":56537578,
+            "title":"A Life Left Behind",
+            "duration":349,
+            "replayGain":-9.37,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-01-29T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":13,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":6,
+            "copyright":"2015 Roadrunner Records, Inc.",
+            "description":null,
+            "url":"http://www.tidal.com/track/56537578",
+            "isrc":"NLA321500274",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":56537565,
+                "title":"The Astonishing",
+                "cover":"1bbb5c41-f489-4b48-bcc1-81949bffba66",
+                "releaseDate":"2016-01-29"
+            }
+        },
+        {
+            "id":1844829,
+            "title":"About to Crash",
+            "duration":351,
+            "replayGain":-10.21,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2015-06-05T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":7,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":5,
+            "copyright":"2002 Elektra Entertainment for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1844829",
+            "isrc":"USEE10140478",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1844822,
+                "title":"Six Degrees of Inner Turbulence",
+                "cover":"96f6d2ce-456b-4833-b867-992a8c9d9d99",
+                "releaseDate":"2002-01-22"
+            }
+        },
+        {
+            "id":369160,
+            "title":"Afterlife (with the Octavarium Orchestra) [Live at Radio City Music Hall, New York City, NY, 4/1/2006]",
+            "duration":347,
+            "replayGain":-10.86,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-11-23T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":4,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":1,
+            "copyright":"2006 Rhino Entertainment Company. All Rights Reserved. Manufactured & Marketed by Rhino Entertainment Company, a Warner Music Group company",
+            "description":null,
+            "url":"http://www.tidal.com/track/369160",
+            "isrc":"USRH10650857",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":369156,
+                "title":"Score: 20th Anniversary World Tour Live with the Octavarium Orchestra [w/Interactive Booklet]",
+                "cover":"5b25e4f9-d319-467e-bbd8-ec1c43cf5ff1",
+                "releaseDate":"2006-01-01"
+            }
+        },
+        {
+            "id":1845525,
+            "title":"Under a Glass Moon",
+            "duration":423,
+            "replayGain":-5.68,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2015-06-05T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":6,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":7,
+            "copyright":"1992 Atlantic Recording Corporation for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1845525",
+            "isrc":"USEE10180256",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1845519,
+                "title":"Images and Words",
+                "cover":"37fa3f1a-398d-426c-9953-8da843401dc9",
+                "releaseDate":"1992-06-30"
+            }
+        },
+        {
+            "id":369170,
+            "title":"Metropolis - Part I: \"The Miracle and the Sleeper\" (with the Octavarium Orchestra) [Live at Radio City Music Hall, New York City, NY, 4/1/2006]",
+            "duration":639,
+            "replayGain":-10.86,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-11-23T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":14,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":3,
+            "copyright":"2006 Rhino Entertainment Company. All Rights Reserved. Manufactured & Marketed by Rhino Entertainment Company, a Warner Music Group company",
+            "description":null,
+            "url":"http://www.tidal.com/track/369170",
+            "isrc":"USRH10650867",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":369156,
+                "title":"Score: 20th Anniversary World Tour Live with the Octavarium Orchestra [w/Interactive Booklet]",
+                "cover":"5b25e4f9-d319-467e-bbd8-ec1c43cf5ff1",
+                "releaseDate":"2006-01-01"
+            }
+        },
+        {
+            "id":1845509,
+            "title":"Caught in a Web",
+            "duration":328,
+            "replayGain":-8.72,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-11-25T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":2,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":4,
+            "copyright":"1994 Atlantic Recording Corporation for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1845509",
+            "isrc":"USEW29400066",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1845507,
+                "title":"Awake",
+                "cover":"e662ddc6-8b57-4dc4-982e-4bba80fcf07e",
+                "releaseDate":"1994-10-03"
+            }
+        },
+        {
+            "id":1845520,
+            "title":"Pull Me Under",
+            "duration":494,
+            "replayGain":-5.68,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2015-06-05T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":1,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":16,
+            "copyright":"1992 Atlantic Recording Corporation for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1845520",
+            "isrc":"USEE10180251",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1845519,
+                "title":"Images and Words",
+                "cover":"37fa3f1a-398d-426c-9953-8da843401dc9",
+                "releaseDate":"1992-06-30"
+            }
+        },
+        {
+            "id":398564,
+            "title":"New Millennium",
+            "duration":500,
+            "replayGain":-11.72,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2015-06-05T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":1,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":3,
+            "copyright":"1997 Elektra Entertainment Group, A Division of Warner Communications Inc. for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/398564",
+            "isrc":"USEW19794544",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":398563,
+                "title":"Falling into Infinity",
+                "cover":"fa021ff6-56a2-44db-a0df-64d503000b08",
+                "releaseDate":"1997-09-12"
+            }
+        },
+        {
+            "id":1845522,
+            "title":"Take the Time",
+            "duration":501,
+            "replayGain":-5.68,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2015-06-05T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":3,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":9,
+            "copyright":"1992 Atlantic Recording Corporation for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1845522",
+            "isrc":"USEE10180253",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1845519,
+                "title":"Images and Words",
+                "cover":"37fa3f1a-398d-426c-9953-8da843401dc9",
+                "releaseDate":"1992-06-30"
+            }
+        },
+        {
+            "id":1845511,
+            "title":"Erotomania",
+            "duration":404,
+            "replayGain":-8.72,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-11-25T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":4,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":4,
+            "copyright":"1994 Atlantic Recording Corporation for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1845511",
+            "isrc":"USEW29400068",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1845507,
+                "title":"Awake",
+                "cover":"e662ddc6-8b57-4dc4-982e-4bba80fcf07e",
+                "releaseDate":"1994-10-03"
+            }
+        },
+        {
+            "id":398569,
+            "title":"Hell's Kitchen",
+            "duration":257,
+            "replayGain":-11.72,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2015-06-05T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":6,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":3,
+            "copyright":"1997 Elektra Entertainment Group, A Division of Warner Communications Inc. for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/398569",
+            "isrc":"USEW19794549",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":398563,
+                "title":"Falling into Infinity",
+                "cover":"fa021ff6-56a2-44db-a0df-64d503000b08",
+                "releaseDate":"1997-09-12"
+            }
+        },
+        {
+            "id":398570,
+            "title":"Lines in the Sand",
+            "duration":725,
+            "replayGain":-11.72,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2015-06-05T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":7,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":3,
+            "copyright":"1997 Elektra Entertainment Group, A Division of Warner Communications Inc. for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/398570",
+            "isrc":"USEW19794550",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":398563,
+                "title":"Falling into Infinity",
+                "cover":"fa021ff6-56a2-44db-a0df-64d503000b08",
+                "releaseDate":"1997-09-12"
+            }
+        },
+        {
+            "id":1844839,
+            "title":"A Change of Seasons - The Crimson Sunrise / Innocence / Carpe Diem / The Darkest of Winters / Another World / The Inevitable Summer / The Crimson Sunset",
+            "duration":1389,
+            "replayGain":-8.76,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2014-06-18T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":1,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":5,
+            "copyright":"1995 Atlantic Recording Corporation for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1844839",
+            "isrc":"USEW20100177",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1844838,
+                "title":"A Change of Seasons",
+                "cover":"a434e795-483b-4a31-ab05-b3ed60be4f61",
+                "releaseDate":"1995-01-01"
+            }
+        },
+        {
+            "id":1844824,
+            "title":"Blind Faith",
+            "duration":621,
+            "replayGain":-10.21,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2015-06-05T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":2,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":2,
+            "copyright":"2002 Elektra Entertainment for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1844824",
+            "isrc":"USEE10140473",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1844822,
+                "title":"Six Degrees of Inner Turbulence",
+                "cover":"96f6d2ce-456b-4833-b867-992a8c9d9d99",
+                "releaseDate":"2002-01-22"
+            }
+        },
+        {
+            "id":1658533,
+            "title":"Misunderstood",
+            "duration":315,
+            "replayGain":-11.3,
+            "peak":0.954253,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-11-12T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":6,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":2,
+            "copyright":"2008 Elektra Entertainment Group for the United States, and WEA Int'l for outside the United States",
+            "description":null,
+            "url":"http://www.tidal.com/track/1658533",
+            "isrc":"USEE10701882",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1658527,
+                "title":"Greatest Hit (...and 21 Other Pretty Cool Songs)",
+                "cover":"1c615afa-6f23-4248-9eac-28b3920be18f",
+                "releaseDate":"2008-03-28"
+            }
+        },
+        {
+            "id":56537584,
+            "title":"A New Beginning",
+            "duration":460,
+            "replayGain":-9.37,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-01-29T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":19,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":5,
+            "copyright":"2015 Roadrunner Records, Inc.",
+            "description":null,
+            "url":"http://www.tidal.com/track/56537584",
+            "isrc":"NLA321500280",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":56537565,
+                "title":"The Astonishing",
+                "cover":"1bbb5c41-f489-4b48-bcc1-81949bffba66",
+                "releaseDate":"2016-01-29"
+            }
+        },
+        {
+            "id":2918118,
+            "title":"A Nightmare To Remember",
+            "duration":972,
+            "replayGain":-11.57,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2009-09-22T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":1,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":4,
+            "copyright":"2009 The All Blacks B.V. Issued under license to Roadrunner Records from The All Blacks B.V. Roadrunner Records is a registered trademark of The All Blacks B.V.",
+            "description":null,
+            "url":"http://www.tidal.com/track/2918118",
+            "isrc":"NLA320988722",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":2918117,
+                "title":"Black Clouds & Silver Linings",
+                "cover":"39b5fd6f-420c-4b51-8c88-addbae837603",
+                "releaseDate":"2009-06-19"
+            }
+        },
+        {
+            "id":1844823,
+            "title":"The Glass Prison",
+            "duration":833,
+            "replayGain":-10.21,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2015-06-05T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":1,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":4,
+            "copyright":"2002 Elektra Entertainment for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1844823",
+            "isrc":"USEE10140472",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1844822,
+                "title":"Six Degrees of Inner Turbulence",
+                "cover":"96f6d2ce-456b-4833-b867-992a8c9d9d99",
+                "releaseDate":"2002-01-22"
+            }
+        },
+        {
+            "id":2918120,
+            "title":"Wither",
+            "duration":327,
+            "replayGain":-11.57,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2009-09-22T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":3,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":9,
+            "copyright":"2009 The All Blacks B.V. Issued under license to Roadrunner Records from The All Blacks B.V. Roadrunner Records is a registered trademark of The All Blacks B.V.",
+            "description":null,
+            "url":"http://www.tidal.com/track/2918120",
+            "isrc":"NLA320988724",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":2918117,
+                "title":"Black Clouds & Silver Linings",
+                "cover":"39b5fd6f-420c-4b51-8c88-addbae837603",
+                "releaseDate":"2009-06-19"
+            }
+        },
+        {
+            "id":255817,
+            "title":"In the Name of God",
+            "duration":855,
+            "replayGain":-10.63,
+            "peak":0.999023,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2015-06-05T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":7,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":4,
+            "copyright":"2003 Elektra Entertainment Group Inc. for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/255817",
+            "isrc":"USEE10340691",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":255810,
+                "title":"Train of Thought",
+                "cover":"b335e800-09bb-42d7-afda-07c5c3b3d849",
+                "releaseDate":"2003-11-10"
+            }
+        },
+        {
+            "id":2918123,
+            "title":"The Count Of Tuscany",
+            "duration":1157,
+            "replayGain":-11.57,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2009-09-22T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":6,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":7,
+            "copyright":"2009 The All Blacks B.V. Issued under license to Roadrunner Records from The All Blacks B.V. Roadrunner Records is a registered trademark of The All Blacks B.V.",
+            "description":null,
+            "url":"http://www.tidal.com/track/2918123",
+            "isrc":"NLA320988727",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":2918117,
+                "title":"Black Clouds & Silver Linings",
+                "cover":"39b5fd6f-420c-4b51-8c88-addbae837603",
+                "releaseDate":"2009-06-19"
+            }
+        },
+        {
+            "id":7777269,
+            "title":"On the Backs of Angels",
+            "duration":522,
+            "replayGain":-10.1,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2011-09-12T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":1,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":9,
+            "copyright":"2011 The All Blacks B.V.",
+            "description":null,
+            "url":"http://www.tidal.com/track/7777269",
+            "isrc":"NLA321191156",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":7777268,
+                "title":"A Dramatic Turn of Events",
+                "cover":"4caa6be1-22ce-4d45-9a22-01a2e1b22277",
+                "releaseDate":"2011-09-09"
+            }
+        },
+        {
+            "id":701908,
+            "title":"Constant Motion",
+            "duration":415,
+            "replayGain":-11.75,
+            "peak":0.988556,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2008-12-01T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":3,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":3,
+            "copyright":"2007 The All Blacks B.V. Issued under license to Roadrunner Records from the The All Blacks B.V.",
+            "description":null,
+            "url":"http://www.tidal.com/track/701908",
+            "isrc":"NLA320784230",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":701905,
+                "title":"Systematic Chaos",
+                "cover":"80eae885-aa9d-43fd-b656-ac911ff64efa",
+                "releaseDate":"2007-06-04"
+            }
+        },
+        {
+            "id":7777276,
+            "title":"Breaking All Illusions",
+            "duration":745,
+            "replayGain":-10.1,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2011-09-12T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":8,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":7,
+            "copyright":"2011 The All Blacks B.V.",
+            "description":null,
+            "url":"http://www.tidal.com/track/7777276",
+            "isrc":"NLA321191163",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":7777268,
+                "title":"A Dramatic Turn of Events",
+                "cover":"4caa6be1-22ce-4d45-9a22-01a2e1b22277",
+                "releaseDate":"2011-09-09"
+            }
+        },
+        {
+            "id":22560691,
+            "title":"The Looking Glass",
+            "duration":293,
+            "replayGain":-12.17,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2013-09-23T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":3,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":2,
+            "copyright":"2013 Roadrunner Records, Inc.",
+            "description":null,
+            "url":"http://www.tidal.com/track/22560691",
+            "isrc":"NLA321392678",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":22560688,
+                "title":"Dream Theater",
+                "cover":"e35a2ed2-dace-4e92-83cb-bcfc4beacd29",
+                "releaseDate":"2013-09-24"
+            }
+        },
+        {
+            "id":54329204,
+            "title":"The Gift of Music",
+            "duration":247,
+            "replayGain":-9.23,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2015-12-04T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":1,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":11,
+            "copyright":"2015 Roadrunner Records, Inc.",
+            "description":null,
+            "url":"http://www.tidal.com/track/54329204",
+            "isrc":"NLA321500264",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":54329203,
+                "title":"The Gift of Music",
+                "cover":"b8569b13-12a5-4f98-9a36-6459107538a4",
+                "releaseDate":"2015-12-04"
+            }
+        },
+        {
+            "id":22560692,
+            "title":"Enigma Machine",
+            "duration":361,
+            "replayGain":-12.17,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2013-09-23T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":4,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":5,
+            "copyright":"2013 Roadrunner Records, Inc.",
+            "description":null,
+            "url":"http://www.tidal.com/track/22560692",
+            "isrc":"NLA321392679",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":22560688,
+                "title":"Dream Theater",
+                "cover":"e35a2ed2-dace-4e92-83cb-bcfc4beacd29",
+                "releaseDate":"2013-09-24"
+            }
+        },
+        {
+            "id":1658532,
+            "title":"Scene Six: Home",
+            "duration":339,
+            "replayGain":-11.3,
+            "peak":0.965911,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-11-12T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":5,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":2,
+            "copyright":"2008 Elektra Entertainment Group for the United States, and WEA Int'l for outside the United States",
+            "description":null,
+            "url":"http://www.tidal.com/track/1658532",
+            "isrc":"USEE10701881",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1658527,
+                "title":"Greatest Hit (...and 21 Other Pretty Cool Songs)",
+                "cover":"1c615afa-6f23-4248-9eac-28b3920be18f",
+                "releaseDate":"2008-03-28"
+            }
+        },
+        {
+            "id":292091,
+            "title":"Octavarium",
+            "duration":1438,
+            "replayGain":-11.05,
+            "peak":0.999084,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-11-25T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":8,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":7,
+            "copyright":"2005 Atlantic Recording Corp For the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/292091",
+            "isrc":"USEE10500976",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":292083,
+                "title":"Octavarium",
+                "cover":"a524daa2-b04e-4466-b435-6f2a56312880",
+                "releaseDate":"2005-06-06"
+            }
+        },
+        {
+            "id":1844740,
+            "title":"Scene Nine: Finally Free",
+            "duration":720,
+            "replayGain":-10.31,
+            "peak":1.0,
+            "allowStreaming":true,
+            "streamReady":true,
+            "streamStartDate":"2016-11-24T00:00:00.000+0000",
+            "premiumStreamingOnly":false,
+            "trackNumber":12,
+            "volumeNumber":1,
+            "version":null,
+            "popularity":4,
+            "copyright":"1999 Elektra Entertainment Group Inc. for the United States and WEA International Inc. for the world outside of the United States.",
+            "description":null,
+            "url":"http://www.tidal.com/track/1844740",
+            "isrc":"USEW19900327",
+            "editable":false,
+            "explicit":false,
+            "audioQuality":"LOSSLESS",
+            "audioModes":[
+                "STEREO"
+            ],
+            "artist":{
+                "id":14670,
+                "name":"Dream Theater",
+                "type":"MAIN"
+            },
+            "artists":[
+                {
+                    "id":14670,
+                    "name":"Dream Theater",
+                    "type":"MAIN"
+                }
+            ],
+            "album":{
+                "id":1844728,
+                "title":"Metropolis, Pt. 2: Scenes from a Memory",
+                "cover":"52dd1664-8ffe-40c8-80c6-895347b7a67e",
+                "releaseDate":"1999-01-01"
+            }
+        }
+    ]
+
+}

@@ -6,7 +6,7 @@ using SacredSkull.TidalUSDK.Enums;
 
 namespace SacredSkull.TidalUSDK.Requests
 {
-    public class TidalFilterableRequest : TidalBaseRequest
+    public class TidalFilterableRequest : TidalPaginatedRequest
     {
         [JsonConverter(typeof(CommaSeparatedEnumDeserializer))]
         [JsonProperty("filter")]

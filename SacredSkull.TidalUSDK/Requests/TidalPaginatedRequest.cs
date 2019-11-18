@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace SacredSkull.TidalUSDK.Requests
 {
-    public class TidalBaseRequest : TidalRequest
+    public class TidalPaginatedRequest : TidalRequest
     {
         [JsonProperty("limit", NullValueHandling = NullValueHandling.Ignore)]
         public int Limit { get; set; }
@@ -17,6 +17,11 @@ namespace SacredSkull.TidalUSDK.Requests
             if (Limit < 1)
             {
                 Limit = 999;
+            }
+
+            if (Offset < 0)
+            {
+                Offset = 0;
             }
         }
     }

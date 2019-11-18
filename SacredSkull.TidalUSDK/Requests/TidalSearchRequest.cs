@@ -5,9 +5,10 @@ using SacredSkull.TidalUSDK.Enums;
 
 namespace SacredSkull.TidalUSDK.Requests
 {
-    public class TidalSearchRequest : TidalBaseRequest
+    public class TidalSearchRequest : TidalPaginatedRequest
     {
-        [JsonProperty("query")] public string Query { get; set; }
+        [JsonProperty("query")]
+        public string Query { get; set; }
 
         [JsonProperty("types")]
         [JsonConverter(typeof(CommaSeparatedEnumDeserializer))]

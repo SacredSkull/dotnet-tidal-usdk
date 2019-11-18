@@ -1,0 +1,55 @@
+{
+
+    "limit":10,
+    "offset":0,
+    "totalNumberOfItems":2,
+    "items":[
+        {
+            "type":"USER_CREATED",
+            "created":"2019-03-08T14:29:37.655+0000",
+            "playlist":{
+                "uuid":"6836fd49-4dd9-48c2-8a08-ad330a5ac039",
+                "title":"80's as hell",
+                "numberOfTracks":93,
+                "numberOfVideos":0,
+                "creator":{
+                    "id":112186200
+                },
+                "description":"",
+                "duration":26041,
+                "lastUpdated":"2019-11-13T11:37:00.886+0000",
+                "created":"2019-03-08T14:29:37.655+0000",
+                "type":"USER",
+                "publicPlaylist":false,
+                "url":"http://www.tidal.com/playlist/6836fd49-4dd9-48c2-8a08-ad330a5ac039",
+                "image":"be5e009d-57f7-4d39-89ba-240107a43f10",
+                "popularity":0,
+                "squareImage":"cf8dcf38-7db4-46e3-a17f-dd370e3c17f7"
+            }
+        },
+        {
+            "type":"USER_CREATED",
+            "created":"2019-10-22T09:33:48.812+0000",
+            "playlist":{
+                "uuid":"32dc3834-727e-4319-a5d1-4e887cbf22bd",
+                "title":"Chill Indie",
+                "numberOfTracks":19,
+                "numberOfVideos":0,
+                "creator":{
+                    "id":112186200
+                },
+                "description":"",
+                "duration":4151,
+                "lastUpdated":"2019-11-15T11:57:32.577+0000",
+                "created":"2019-10-22T09:33:48.812+0000",
+                "type":"USER",
+                "publicPlaylist":false,
+                "url":"http://www.tidal.com/playlist/32dc3834-727e-4319-a5d1-4e887cbf22bd",
+                "image":"9e815641-4d23-4212-a782-5956c543c232",
+                "popularity":0,
+                "squareImage":"e75d27c5-1f82-4f21-8ee1-ba5baa454190"
+            }
+        }
+    ]
+
+}

@@ -1,0 +1,101 @@
+{
+
+    "limit":2,
+    "offset":0,
+    "totalNumberOfItems":94,
+    "items":[
+        {
+            "item":{
+                "id":151316,
+                "title":"The Universal",
+                "duration":240,
+                "replayGain":-10.4,
+                "peak":0.988708,
+                "allowStreaming":true,
+                "streamReady":true,
+                "streamStartDate":"2014-04-23T00:00:00.000+0000",
+                "premiumStreamingOnly":false,
+                "trackNumber":4,
+                "volumeNumber":1,
+                "version":null,
+                "popularity":15,
+                "copyright":"1995 Parlophone Records Ltd, a Warner Music Group Company",
+                "description":null,
+                "url":"http://www.tidal.com/track/151316",
+                "isrc":"GBAYE9500175",
+                "editable":false,
+                "explicit":false,
+                "audioQuality":"LOSSLESS",
+                "audioModes":[
+                    "STEREO"
+                ],
+                "artist":{
+                    "id":10052,
+                    "name":"Blur",
+                    "type":"MAIN"
+                },
+                "artists":[
+                    {
+                        "id":10052,
+                        "name":"Blur",
+                        "type":"MAIN"
+                    }
+                ],
+                "album":{
+                    "id":151312,
+                    "title":"Blur: The Best Of",
+                    "cover":"09eabd14-1fee-4582-81b0-8ae06e435679",
+                    "releaseDate":"2000-10-30"
+                }
+            },
+            "type":"track"
+        },
+        {
+            "item":{
+                "id":66932437,
+                "title":"Personal Jesus",
+                "duration":294,
+                "replayGain":-10.16,
+                "peak":1.0,
+                "allowStreaming":true,
+                "streamReady":true,
+                "streamStartDate":"2016-11-18T00:00:00.000+0000",
+                "premiumStreamingOnly":false,
+                "trackNumber":3,
+                "volumeNumber":1,
+                "version":null,
+                "popularity":31,
+                "copyright":"(P) 1990 Venusnote Ltd. under exclusive license to Sony Music Entertainment International Ltd",
+                "description":null,
+                "url":"http://www.tidal.com/track/66932437",
+                "isrc":"GBAJH0600289",
+                "editable":false,
+                "explicit":false,
+                "audioQuality":"LOSSLESS",
+                "audioModes":[
+                    "STEREO"
+                ],
+                "artist":{
+                    "id":8877,
+                    "name":"Depeche Mode",
+                    "type":"MAIN"
+                },
+                "artists":[
+                    {
+                        "id":8877,
+                        "name":"Depeche Mode",
+                        "type":"MAIN"
+                    }
+                ],
+                "album":{
+                    "id":66932434,
+                    "title":"Violator (Deluxe)",
+                    "cover":"ec447f24-1ed4-479b-9a8a-f4a35097705a",
+                    "releaseDate":"1990-03-19"
+                }
+            },
+            "type":"track"
+        }
+    ]
+
+}

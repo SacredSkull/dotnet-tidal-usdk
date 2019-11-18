@@ -4,10 +4,8 @@ using Newtonsoft.Json.Converters;
 namespace SacredSkull.TidalUSDK.Enums
 {
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum TidalPlaylistType
+    public enum TidalPlaylistFavouriteType
     {
-        ARTIST,
-        EDITORIAL,
-        USER
+        USER_CREATED
     }
 }
