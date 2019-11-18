@@ -29,7 +29,7 @@ namespace TidalTest
                 return;
             }
 
-            TidalConnection tidalConnection;
+            TidalClient tidalClient;
 
             {
                 dynamic conf = JObject.Parse(strConf);
@@ -41,10 +41,10 @@ namespace TidalTest
                     return;
                 }
 
-                tidalConnection = new TidalConnection(conf.username.ToString(), conf.password.ToString());
+                tidalClient = new TidalClient(conf.username.ToString(), conf.password.ToString());
             }
 
-            var search = await tidalConnection.AsyncSearch(
+            var search = await tidalClient.AsyncSearch(
                 "In the presence of enemies, pt. 1",
                 new[]
                 {
@@ -52,22 +52,22 @@ namespace TidalTest
                 },
                 5);
             var trackId = search.Tracks.Last(track => track.Artists.Any(trackArtist => trackArtist.Type == "MAIN")).Id;
-            var trackInfo = await tidalConnection.AsyncGetTrack(trackId);
+            var trackInfo = await tidalClient.AsyncGetTrack(trackId);
 
             /* Kind of distracting for TIDAL to pause your music while coding (since you're "playing" on more than one device at a time) */
             //var trackStreamingURL = await tidalConnection.AsyncGetTrackStreamingURL(trackId, TidalStreamingQualityEnum.HIGH);
             //var trackOfflineStreamingURL = await tidalConnection.AsyncGetTrackOfflineStreamingURL(trackId, TidalStreamingQualityEnum.HIGH);
-            var albumCover = tidalConnection.GetCoverUrl(trackInfo.Album.Cover);
+            var albumCover = tidalClient.GetCoverUrl(trackInfo.Album.Cover);
 
             var artistId = trackInfo.Artists.First().Id;
-            var artistVideos = await tidalConnection.AsyncGetArtistVideos(artistId);
-            var artist = await tidalConnection.AsyncGetArtist(artistId);
-            var artistBio = await tidalConnection.AsyncGetArtistBio(artistId);
-            var artistTopTen = await tidalConnection.AsyncGetArtistTopTracks(artistId);
-            var artistAlbums = await tidalConnection.AsyncGetArtistAlbums(artistId);
-            var artistSimilar = await tidalConnection.AsyncGetSimilarArtists(artistId);
+            var artistVideos = await tidalClient.AsyncGetArtistVideos(artistId);
+            var artist = await tidalClient.AsyncGetArtist(artistId);
+            var artistBio = await tidalClient.AsyncGetArtistBio(artistId);
+            var artistTopTen = await tidalClient.AsyncGetArtistTopTracks(artistId);
+            var artistAlbums = await tidalClient.AsyncGetArtistAlbums(artistId);
+            var artistSimilar = await tidalClient.AsyncGetSimilarArtists(artistId);
 
-            var playlistSearch = await tidalConnection.AsyncSearch(
+            var playlistSearch = await tidalClient.AsyncSearch(
                 "Dream Theater",
                 new[]
                 {
@@ -75,14 +75,14 @@ namespace TidalTest
                 },
                 1);
             var playlistId = playlistSearch.Playlists.First().Id;
-            var playlist = await tidalConnection.AsyncGetPlaylist(playlistId);
-            var playlistTracks = await tidalConnection.AsyncGetPlaylistTracks(playlistId);
+            var playlist = await tidalClient.AsyncGetPlaylist(playlistId);
+            var playlistTracks = await tidalClient.AsyncGetPlaylistTracks(playlistId);
 
-            var myPlaylists = await tidalConnection.AsyncGetMyPlaylists();
+            var myPlaylists = await tidalClient.AsyncGetMyPlaylists();
             var myPlaylistId = myPlaylists.Items.First().Item.Id;
-            var playlistRecommendations = await tidalConnection.AsyncGetPlaylistRecommendations(myPlaylistId);
+            var playlistRecommendations = await tidalClient.AsyncGetPlaylistRecommendations(myPlaylistId);
 
-            var albumSearch = await tidalConnection.AsyncSearch(
+            var albumSearch = await tidalClient.AsyncSearch(
                 "Systematic Chaos",
                 new[]
                 {
@@ -90,17 +90,17 @@ namespace TidalTest
                 },
                 1);
             var albumId = albumSearch.Albums.First().Id;
-            var album = await tidalConnection.AsyncGetAlbum(albumId);
-            var albumTracks = await tidalConnection.AsyncGetAlbumTracks(albumId);
+            var album = await tidalClient.AsyncGetAlbum(albumId);
+            var albumTracks = await tidalClient.AsyncGetAlbumTracks(albumId);
 
             var videoId = artistVideos.Items.First().Id;
-            var video = await tidalConnection.AsyncGetVideo(videoId);
-            var userId = tidalConnection.GetCurrentUserId();
+            var video = await tidalClient.AsyncGetVideo(videoId);
+            var userId = tidalClient.GetCurrentUserId();
 
-            var favouriteArtists = await tidalConnection.AsyncGetMyFavouriteArtists();
-            var favouriteAlbums = await tidalConnection.AsyncGetMyFavouriteAlbums();
-            var favouriteTracks = await tidalConnection.AsyncGetMyFavouriteTracks(1951, null, 0, TidalOrderingEnum.DATE, TidalOrderingDirectionEnum.Ascending);
-            var favouriteVideos = await tidalConnection.AsyncGetMyFavouriteVideos();
+            var favouriteArtists = await tidalClient.AsyncGetMyFavouriteArtists();
+            var favouriteAlbums = await tidalClient.AsyncGetMyFavouriteAlbums();
+            var favouriteTracks = await tidalClient.AsyncGetMyFavouriteTracks(1951, null, 0, TidalOrderingEnum.DATE, TidalOrderingDirectionEnum.Ascending);
+            var favouriteVideos = await tidalClient.AsyncGetMyFavouriteVideos();
 
             Console.WriteLine($"Your user ID is {userId}");
             Console.WriteLine($"Enter request ({userId}): ");
@@ -112,7 +112,7 @@ namespace TidalTest
 
                 try
                 {
-                    var result = await tidalConnection.AsyncDebugQueryAPI(input);
+                    var result = await tidalClient.AsyncDebugQueryAPI(input);
                     Console.WriteLine(await result.Content.ReadAsStringAsync());
                 }
                 catch (FlurlHttpException e)
