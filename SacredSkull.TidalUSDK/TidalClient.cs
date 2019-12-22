@@ -14,6 +14,7 @@ using SacredSkull.TidalUSDK.Constants;
 using SacredSkull.TidalUSDK.Enums;
 using SacredSkull.TidalUSDK.Extensions;
 using SacredSkull.TidalUSDK.Requests;
+using SacredSkull.TidalUSDK.Requests.Body;
 using SacredSkull.TidalUSDK.Responses;
 using StringExtensions = SacredSkull.TidalUSDK.Extensions.StringExtensions;
 
@@ -231,21 +232,105 @@ namespace SacredSkull.TidalUSDK
         }
 
         /// <summary>
-        ///     A very low level API call function that just performs connection checks, appends the URI to the base TIDAL URL
-        ///     and constructs the request.
+        ///     This is the basic query function, everything (except the login request) uses this function as a base.
         /// </summary>
-        /// <param name="url">The URI</param>
-        /// <param name="body">POST body, as a string</param>
+        /// <param name="relativeUri">The relative URI to TIDAL's base API</param>
+        /// <param name="request">Request object</param>
+        /// <param name="body">String body</param>
+        /// <param name="baseUrl">Base URL to work from</param>
         /// <returns>TIDAL Response</returns>
-        private async Task<HttpResponseMessage> AsyncPost(Url url, string body)
+        private async Task<HttpResponseMessage> AsyncPostAPI(string relativeUri, TidalRequest request = null, TidalEmptyBody body = null, Uri baseUrl = null)
         {
             if (!IsConnected)
             {
                 await Connect();
             }
 
+            if (request == null)
+            {
+                request = new TidalRequest();
+            }
+
+            // Apply defaults - if country code is set & valid, apply it on top
+            request.SetDefaults(activeLogin.CountryCode);
+
+            // Convert request to JSON and submit request
+            var url = new Url(baseUrl == null ? TidalUrls.BaseAPI : baseUrl);
+            return await AsyncPost(url.AppendPathSegment(relativeUri.TrimStart('/')), request, body);
+        }
+
+        /// <summary>
+        ///     This is the basic query function, everything (except the login request) uses this function as a base.
+        /// </summary>
+        /// <param name="relativeUri">The relative URI to TIDAL's base API</param>
+        /// <param name="request">Request object</param>
+        /// <param name="body">String body</param>
+        /// <param name="baseUrl">Base URL to work from</param>
+        /// <returns>TIDAL Response</returns>
+        private async Task<HttpResponseMessage> AsyncDeleteAPI(string relativeUri, TidalRequest request = null, TidalEmptyBody body = null, Uri baseUrl = null)
+        {
+            if (!IsConnected)
+            {
+                await Connect();
+            }
+
+            if (request == null)
+            {
+                request = new TidalRequest();
+            }
+
+            // Apply defaults - if country code is set & valid, apply it on top
+            request.SetDefaults(activeLogin.CountryCode);
+
+            // Convert request to JSON and submit request
+            var url = new Url(baseUrl == null ? TidalUrls.BaseAPI : baseUrl);
+            return await AsyncDelete(url.AppendPathSegment(relativeUri.TrimStart('/')), request, body);
+        }
+
+        /// <summary>
+        ///     A very low level API call function that just performs connection checks, appends the URI to the base TIDAL URL
+        ///     and constructs the request.
+        /// </summary>
+        /// <param name="url">The URI</param>
+        /// <param name="body">POST body, as a string</param>
+        /// <returns>TIDAL Response</returns>
+        private async Task<HttpResponseMessage> AsyncPost(Url url, object query, TidalEmptyBody body)
+        {
+            if (!IsConnected)
+            {
+                await Connect();
+            }
+
+            var json = JsonConvert.SerializeObject(query);
+            var queryDict = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+
             return await url
-                .PostAsync(new StringContent(body, Encoding.UTF8, MediaTypeNames.Application.Json));
+                .SetQueryParams(queryDict)
+                .AttachTidalAuth(activeLogin.SessionId)
+                .PostUrlEncodedAsync(body);
+        }
+
+        /// <summary>
+        ///     A very low level API call function that just performs connection checks, appends the URI to the base TIDAL URL
+        ///     and constructs the request.
+        /// </summary>
+        /// <param name="url">The URI</param>
+        /// <param name="body">POST body, as a string</param>
+        /// <returns>TIDAL Response</returns>
+        private async Task<HttpResponseMessage> AsyncDelete(Url url, object query, TidalEmptyBody body)
+        {
+            if (!IsConnected)
+            {
+                await Connect();
+            }
+
+            var json = JsonConvert.SerializeObject(query);
+            var queryDict = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+
+            return await url
+                .SetQueryParams(queryDict)
+                .AttachTidalAuth(activeLogin.SessionId)
+                .SendUrlEncodedAsync(HttpMethod.Delete, body);
         }
 
         private async Task<HttpResponseMessage> AsyncGet(Url url, object query)

@@ -102,6 +102,10 @@ namespace TidalTest
             var favouriteTracks = await tidalClient.AsyncGetMyFavouriteTracks(1951, null, 0, TidalOrderingEnum.DATE, TidalOrderingDirectionEnum.Ascending);
             var favouriteVideos = await tidalClient.AsyncGetMyFavouriteVideos();
 
+            var favTrack = favouriteTracks.Items.First().Item;
+            await tidalClient.AsyncRemoveTrackFromMyLibrary(favTrack.Id);
+            Console.WriteLine($"Deleting {favTrack.Title} by {favTrack.Artists.First().Name}");
+
             Console.WriteLine($"Your user ID is {userId}");
             Console.WriteLine($"Enter request ({userId}): ");
             var input = Console.ReadLine();
@@ -125,6 +129,8 @@ namespace TidalTest
                 Console.WriteLine($"Enter request ({userId}): ");
                 input = Console.ReadLine();
             }
+
+            await tidalClient.AsyncAddTrackToMyLibrary(favTrack.Id);
         }
     }
 }

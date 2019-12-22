@@ -6,6 +6,7 @@ using SacredSkull.TidalUSDK.Entities;
 using SacredSkull.TidalUSDK.Enums;
 using SacredSkull.TidalUSDK.Extensions;
 using SacredSkull.TidalUSDK.Requests;
+using SacredSkull.TidalUSDK.Requests.Body;
 using SacredSkull.TidalUSDK.Responses;
 
 namespace SacredSkull.TidalUSDK
@@ -95,6 +96,55 @@ namespace SacredSkull.TidalUSDK
             {
                 throw new HttpRequestException($"The JSON returned by TIDAL for retrieving track info ID: {trackId} does not appear to be valid. {e.Message}");
             }
+        }
+
+        /// <summary>
+        ///     Gets streaming URL for given track
+        /// </summary>
+        /// <param name="trackId">Track ID</param>
+        /// <param mame="streamQuality">Stream quality</param>
+        /// <param name="countryCode">Country code</param>
+        /// <returns>The streaming URL for the given track</returns>
+        /// <exception cref="HttpRequestException">Invalid JSON returned</exception>
+        public async Task<HttpResponseMessage> AsyncAddTrackToMyLibrary(string trackId, string countryCode = null)
+        {
+            var req = new TidalRequest
+            {
+                CountryCode = countryCode
+            };
+
+            var body = new TidalTrackFavoriteBody
+            {
+                TrackId = trackId
+            };
+
+            var url = StringExtensions.JoinPathSegments(TidalUrls.Users, this.activeLogin.UserId, TidalUrls.UserFavouriteTracks);
+            return await AsyncPostAPI(url, req, body);
+        }
+
+        /// <summary>
+        ///     Gets streaming URL for given track
+        /// </summary>
+        /// <param name="trackId">Track ID</param>
+        /// <param mame="streamQuality">Stream quality</param>
+        /// <param name="countryCode">Country code</param>
+        /// <returns>The streaming URL for the given track</returns>
+        /// <exception cref="HttpRequestException">Invalid JSON returned</exception>
+        public async Task<HttpResponseMessage> AsyncRemoveTrackFromMyLibrary(string trackId, string countryCode = null)
+        {
+            var req = new TidalRequest
+            {
+                CountryCode = countryCode
+            };
+
+            var body = new TidalTrackFavoriteBody
+            {
+                TrackId = trackId
+            };
+
+            var url = StringExtensions.JoinPathSegments(TidalUrls.Users, this.activeLogin.UserId,
+                TidalUrls.UserFavouriteTracks, trackId);
+            return await AsyncDeleteAPI(url, req, body);
         }
     }
 }
