@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Flurl.Http;
 using Newtonsoft.Json.Linq;
-using SacredSkull.TidalUSDK;
-using SacredSkull.TidalUSDK.Enums;
+using TidalUSDK;
+using TidalUSDK.Enums;
 
 namespace TidalTest
 {
@@ -105,6 +105,9 @@ namespace TidalTest
             var favTrack = favouriteTracks.Items.First().Item;
             await tidalClient.AsyncRemoveTrackFromMyLibrary(favTrack.Id);
             Console.WriteLine($"Deleting {favTrack.Title} by {favTrack.Artists.First().Name}");
+
+            await tidalClient.AsyncAddTrackToMyLibrary(favTrack.Id);
+            Console.WriteLine($"...And now putting it back again.");
 
             Console.WriteLine($"Your user ID is {userId}");
             Console.WriteLine($"Enter request ({userId}): ");
