@@ -13,8 +13,8 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
     - name: Pack release
-      run: dotnet pack -c Release SacredSkull.TidalUSDKR
+      run: dotnet pack -c Release TidalUSDKR
     - name: Publish NuGet
-      run: cd SacredSkull.TidalUSDK/bin/Release/ && for pkg in *.nupkg; do dotnet nuget push $pkg -k $nuget_api_key https://api.nuget.org/v3/index.json; done
+      run: cd TidalUSDK/bin/Release/ && for pkg in *.nupkg; do dotnet nuget push $pkg -k $nuget_api_key -s https://api.nuget.org/v3/index.json; done
       env:
         nuget_api_key: ${{ secrets.NugetApiKey }}

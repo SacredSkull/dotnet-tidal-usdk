@@ -24,7 +24,7 @@ jobs:
         name: TidalUSDK-release
         path: TidalUSDK/bin/Release/
     - name: Publish NuGet
-      run: cd TidalUSDK/bin/Release/ && for pkg in *.nupkg; do dotnet nuget push $pkg -k $nuget_api_key https://api.nuget.org/v3/index.json; done
+      run: cd TidalUSDK/bin/Release/ && for pkg in *.nupkg; do dotnet nuget push $pkg -k $nuget_api_key -s https://api.nuget.org/v3/index.json; done
       env:
         nuget_api_key: ${{ secrets.NugetApiKey }}
 
