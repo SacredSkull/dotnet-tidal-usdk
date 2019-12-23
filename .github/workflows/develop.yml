@@ -42,3 +42,5 @@ jobs:
       uses: actions/setup-dotnet@v1
     - name: Unit tests
       run: dotnet test
+      env:
+        DOTNET_CLI_TELEMETRY_OPTOUT: 1
