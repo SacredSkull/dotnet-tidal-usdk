@@ -18,13 +18,13 @@ jobs:
     - name: Unit Tests
       run: dotnet test
     - name: Pack release
-      run: dotnet pack -c Release SacredSkull.TidalUSDK
+      run: dotnet pack -c Release TidalUSDK
     - uses: actions/upload-artifact@master
       with:
         name: TidalUSDK-release
-        path: SacredSkull.TidalUSDK/bin/Release/
+        path: TidalUSDK/bin/Release/
     - name: Publish NuGet
-      run: cd SacredSkull.TidalUSDK/bin/Release/ && for pkg in *.nupkg; do dotnet nuget push $pkg -k $nuget_api_key https://api.nuget.org/v3/index.json; done
+      run: cd TidalUSDK/bin/Release/ && for pkg in *.nupkg; do dotnet nuget push $pkg -k $nuget_api_key https://api.nuget.org/v3/index.json; done
       env:
         nuget_api_key: ${{ secrets.NugetApiKey }}
 

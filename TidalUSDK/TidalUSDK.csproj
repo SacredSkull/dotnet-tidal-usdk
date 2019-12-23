@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
         <LangVersion>default</LangVersion>
         <Title>TIDAL.NET Core (U)SDK</Title>
         <Description>Unofficial .NET Core SDK for the TIDAL streaming service</Description>
