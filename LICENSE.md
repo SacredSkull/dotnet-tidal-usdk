@@ -11,9 +11,9 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software. The software cannot be used
-for piracy purposes; this includes, but is not limited to, using the software to
-create copies of intelluctual property provided by TIDAL without the copyright
-holder's (TIDAL's) express permission.
+for piracy purposes; this includes using the software to
+create copies (or "back-ups") of intelluctual property provided by TIDAL without the copyright
+holder's (TIDAL's or otherwise) express permission.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
