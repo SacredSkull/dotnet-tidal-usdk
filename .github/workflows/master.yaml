@@ -14,6 +14,8 @@ jobs:
       uses: actions/setup-dotnet@v1
     - name: Pack release
       run: dotnet pack -c Release TidalUSDKR
+      env:
+        DOTNET_CLI_TELEMETRY_OPTOUT: 1
     - name: Publish NuGet
       run: cd TidalUSDK/bin/Release/ && for pkg in *.nupkg; do dotnet nuget push $pkg -k $nuget_api_key -s https://api.nuget.org/v3/index.json; done
       env:

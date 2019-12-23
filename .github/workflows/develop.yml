@@ -15,6 +15,8 @@ jobs:
       uses: actions/setup-dotnet@v1
     - name: Build with dotnet
       run: dotnet build -c Release -v minimal
+      env:
+        DOTNET_CLI_TELEMETRY_OPTOUT: 1
     - name: Unit Tests
       run: dotnet test
     - name: Pack release
