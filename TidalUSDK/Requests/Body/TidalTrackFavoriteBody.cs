@@ -4,7 +4,7 @@ namespace TidalUSDK.Requests.Body
 {
     public class TidalTrackFavoriteBody : TidalEmptyBody
     {
-        [JsonProperty("trackId")]
+        [JsonProperty("trackIds")]
         public string TrackId { get; set; }
     }
 }

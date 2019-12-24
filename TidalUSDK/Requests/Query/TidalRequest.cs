@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using TidalUSDK.Requests.Query;
 
 namespace TidalUSDK.Requests
 {
@@ -7,7 +8,7 @@ namespace TidalUSDK.Requests
         [JsonProperty("countryCode")]
         public string CountryCode { get; set; }
 
-        public virtual void SetDefaults(string countryCode)
+        public override void SetDefaults(string countryCode)
         {
             if (CountryCode == null)
             {

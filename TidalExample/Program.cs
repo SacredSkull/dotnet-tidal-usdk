@@ -45,7 +45,7 @@ namespace TidalTest
             }
 
             var search = await tidalClient.AsyncSearch(
-                "In the presence of enemies, pt. 1",
+                "Thrill Me Riva Starr",
                 new[]
                 {
                     TidalQueryTypes.Tracks
@@ -53,6 +53,8 @@ namespace TidalTest
                 5);
             var trackId = search.Tracks.Last(track => track.Artists.Any(trackArtist => trackArtist.Type == "MAIN")).Id;
             var trackInfo = await tidalClient.AsyncGetTrack(trackId);
+
+            await tidalClient.AsyncAddTrackToMyLibrary(trackInfo.Id);
 
             /* Kind of distracting for TIDAL to pause your music while coding (since you're "playing" on more than one device at a time) */
             //var trackStreamingURL = await tidalConnection.AsyncGetTrackStreamingURL(trackId, TidalStreamingQualityEnum.HIGH);
@@ -103,11 +105,11 @@ namespace TidalTest
             var favouriteVideos = await tidalClient.AsyncGetMyFavouriteVideos();
 
             var favTrack = favouriteTracks.Items.First().Item;
-            await tidalClient.AsyncRemoveTrackFromMyLibrary(favTrack.Id);
             Console.WriteLine($"Deleting {favTrack.Title} by {favTrack.Artists.First().Name}");
+            await tidalClient.AsyncRemoveTrackFromMyLibrary(favTrack.Id);
 
-            await tidalClient.AsyncAddTrackToMyLibrary(favTrack.Id);
             Console.WriteLine($"...And now putting it back again.");
+            await tidalClient.AsyncAddTrackToMyLibrary(favTrack.Id);
 
             Console.WriteLine($"Your user ID is {userId}");
             Console.WriteLine($"Enter request ({userId}): ");

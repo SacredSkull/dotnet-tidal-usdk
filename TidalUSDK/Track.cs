@@ -99,13 +99,17 @@ namespace TidalUSDK
         }
 
         /// <summary>
-        ///     Gets streaming URL for given track
+        ///     Adds a track to your library (favourites list)
         /// </summary>
         /// <param name="trackId">Track ID</param>
         /// <param mame="streamQuality">Stream quality</param>
         /// <param name="countryCode">Country code</param>
         /// <returns>The streaming URL for the given track</returns>
         /// <exception cref="HttpRequestException">Invalid JSON returned</exception>
+        /// <remarks>
+        ///     The TIDAL app has its own library cache, so it might seem like you haven't changed anything.
+        ///     Open a web player (i.e. listen.tidal.com) and you should see the new library change.
+        /// </remarks>
         public async Task<HttpResponseMessage> AsyncAddTrackToMyLibrary(string trackId, string countryCode = null)
         {
             var req = new TidalRequest
@@ -123,13 +127,17 @@ namespace TidalUSDK
         }
 
         /// <summary>
-        ///     Gets streaming URL for given track
+        ///     Removes a track from your library (favourites list)
         /// </summary>
         /// <param name="trackId">Track ID</param>
         /// <param mame="streamQuality">Stream quality</param>
         /// <param name="countryCode">Country code</param>
         /// <returns>The streaming URL for the given track</returns>
         /// <exception cref="HttpRequestException">Invalid JSON returned</exception>
+        /// <remarks>
+        ///     The TIDAL app has its own library cache, so it might seem like you haven't changed anything.
+        ///     Open a web player (i.e. listen.tidal.com) and you should see the new library change.
+        /// </remarks>
         public async Task<HttpResponseMessage> AsyncRemoveTrackFromMyLibrary(string trackId, string countryCode = null)
         {
             var req = new TidalRequest

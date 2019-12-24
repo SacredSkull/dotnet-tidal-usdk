@@ -15,18 +15,18 @@ using TidalUSDK.Constants;
 using TidalUSDK.Enums;
 using TidalUSDK.Requests;
 using TidalUSDK.Requests.Body;
+using TidalUSDK.Requests.Query;
 using TidalUSDK.Responses;
-using StringExtensions = TidalUSDK.Extensions.StringExtensions;
+using TidalUSDK.Utilities;
 
 namespace TidalUSDK
 {
     public partial class TidalClient
     {
         private TidalLoginResponse activeLogin;
-        private readonly SecureString password;
+        private readonly SecureString secureUsername;
+        private readonly SecureString securePassword;
         private string token;
-
-        private readonly SecureString username;
 
         /// <summary>
         ///     Paranoid? Listen to the voices in your head and pass a SecureString instead of vanilla strings.
@@ -43,8 +43,8 @@ namespace TidalUSDK
                 apiToken = TidalNonces.TokenAndroid;
             token = apiToken;
 
-            this.username = username;
-            this.password = password;
+            this.secureUsername = username;
+            this.securePassword = password;
         }
 
         /// <summary>
@@ -56,6 +56,7 @@ namespace TidalUSDK
         ///     You probably don't want to play with this. This changes what comes back in terms of streaming.
         ///     Android/iOS gets a decrypted AAC stream 👌
         /// </param>
+        /// <param name="httpClientFactory">Used only to mock the http client (Flurl)</param>
         public TidalClient(string username, string password, string apiToken = null)
         {
             if (apiToken == null)
@@ -76,11 +77,11 @@ namespace TidalUSDK
                 securePassword.AppendChar(c);
             }
 
-            this.username = secureUsername;
-            this.password = securePassword;
+            this.secureUsername = secureUsername;
+            this.securePassword = securePassword;
 
-            this.username.MakeReadOnly();
-            this.password.MakeReadOnly();
+            this.secureUsername.MakeReadOnly();
+            this.securePassword.MakeReadOnly();
         }
 
         public bool IsConnected { get; private set; }
@@ -132,6 +133,16 @@ namespace TidalUSDK
         }
 
         /// <summary>
+        /// You don't need to use this.
+        /// Connections are lazy-loaded, so only call this in a testing scenario.
+        /// </summary>
+        /// <returns></returns>
+        public async Task ForceConnect()
+        {
+            await Connect();
+        }
+
+        /// <summary>
         ///     This is automatically called if you make an API call
         /// </summary>
         /// <exception cref="ArgumentException"></exception>
@@ -142,19 +153,28 @@ namespace TidalUSDK
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(username.ToString()))
+            var usrPtr = Marshal.SecureStringToBSTR(this.secureUsername);
+            var username = Marshal.PtrToStringBSTR(usrPtr);
+
+            var psdPtr = Marshal.SecureStringToBSTR(this.securePassword);
+            var password = Marshal.PtrToStringBSTR(psdPtr);
+
+            Marshal.ZeroFreeBSTR(usrPtr);
+            Marshal.ZeroFreeBSTR(psdPtr);
+
+            if (string.IsNullOrWhiteSpace(username))
             {
                 throw new ArgumentException(
-                    "You need to provide a username/email address (what you gave was null, whitespace or empty).");
+                    "You need to provide a username/email address (what you gave was null, only whitespace or empty).");
             }
 
-            if (string.IsNullOrWhiteSpace(password.ToString()))
+            if (string.IsNullOrWhiteSpace(password))
             {
                 throw new ArgumentException(
-                    "You need to provide a password (what you gave was null, whitespace or empty).");
+                    "You need to provide a password (what you gave was null, only whitespace or empty).");
             }
 
-            var result = await AsyncLogin();
+            var result = await AsyncLogin(username, password);
             result.EnsureSuccessStatusCode();
 
             try
@@ -174,17 +194,8 @@ namespace TidalUSDK
         /// <summary>
         ///     Performs the login request, most importantly, retrieving the Session ID
         /// </summary>
-        private async Task<HttpResponseMessage> AsyncLogin()
+        private async Task<HttpResponseMessage> AsyncLogin(string username, string password)
         {
-            var usrPtr = Marshal.SecureStringToBSTR(this.username);
-            var username = Marshal.PtrToStringBSTR(usrPtr);
-
-            var psdPtr = Marshal.SecureStringToBSTR(this.password);
-            var password = Marshal.PtrToStringBSTR(psdPtr);
-
-            Marshal.ZeroFreeBSTR(usrPtr);
-            Marshal.ZeroFreeBSTR(psdPtr);
-
             var url = new Url(TidalUrls.BaseAPI);
             return await url
                 .AppendPathSegment(TidalUrls.Login.ToString())
@@ -197,6 +208,7 @@ namespace TidalUSDK
                 });
         }
 
+        [Obsolete]
         public async Task<HttpResponseMessage> AsyncDebugQueryAPI(string relativeUri)
         {
             //BUG: remove this
@@ -239,7 +251,7 @@ namespace TidalUSDK
         /// <param name="body">String body</param>
         /// <param name="baseUrl">Base URL to work from</param>
         /// <returns>TIDAL Response</returns>
-        private async Task<HttpResponseMessage> AsyncPostAPI(string relativeUri, TidalRequest request = null, TidalEmptyBody body = null, Uri baseUrl = null)
+        private async Task<HttpResponseMessage> AsyncPostAPI(string relativeUri, TidalEmptyRequest request = null, TidalEmptyBody body = null, Uri baseUrl = null)
         {
             if (!IsConnected)
             {
@@ -304,10 +316,13 @@ namespace TidalUSDK
             var json = JsonConvert.SerializeObject(query);
             var queryDict = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
 
+            var bodyJson = JsonConvert.SerializeObject(body);
+            var bodyDict = JsonConvert.DeserializeObject<Dictionary<string, string>>(bodyJson);
+
             return await url
                 .SetQueryParams(queryDict)
                 .AttachTidalAuth(activeLogin.SessionId)
-                .PostUrlEncodedAsync(body);
+                .PostAsync(new FormUrlEncodedContent(bodyDict));
         }
 
         /// <summary>

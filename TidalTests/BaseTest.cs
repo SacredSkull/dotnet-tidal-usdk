@@ -1,7 +1,7 @@
 using System.IO;
 using NUnit.Framework;
 
-namespace SacredSkull.TidalTest
+namespace TidalTests
 {
     public abstract class BaseTest
     {

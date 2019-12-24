@@ -24,7 +24,7 @@ namespace TidalUSDK.Converters
         {
             JObject token = JObject.Load(reader);
 
-            // We need a value and type to work with, if these are missing,
+            // We need a value and type to work with, if these are missing we cannot create the relevant subtype.
             if (!token.ContainsKey("value") || !token.ContainsKey("type"))
             {
                 throw new JsonException($"Unrecognised JSON for TopHitResult! Please report this exception. {token}");
@@ -64,7 +64,7 @@ namespace TidalUSDK.Converters
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(
-                        $"USDK has an enum but not been set up to process TidalTopHitResult type '{tidalResultType.ToString()}' in the TidalTopHitResultDeserializer, please report this exception message. {token}");
+                        $"USDK has not been set up to process TidalTopHitResult type '{tidalResultType.ToString()}' in the TidalTopHitResultDeserializer, please report this exception/message as an issue or bug. {token}");
             }
 
             return topHit;

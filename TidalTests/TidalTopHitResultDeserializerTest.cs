@@ -1,11 +1,11 @@
-using Moq;
 using Newtonsoft.Json;
 using NUnit.Framework;
-using SacredSkull.TidalTest.Enums;
+using TidalTest;
+using TidalTest.Enums;
 using TidalUSDK.Entities;
 using TidalUSDK.Enums;
 
-namespace SacredSkull.TidalTest
+namespace TidalTests
 {
     [TestFixture]
     public class TidalTopHitResultDeserializerTest : BaseTest

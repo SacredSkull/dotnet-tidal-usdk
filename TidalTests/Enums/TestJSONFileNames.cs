@@ -1,4 +1,4 @@
-namespace SacredSkull.TidalTest.Enums
+namespace TidalTest.Enums
 {
     public static class TestJSONFileNames
     {
@@ -7,6 +7,7 @@ namespace SacredSkull.TidalTest.Enums
         public const string TopTrack = "TopTrack";
         public const string TopPlaylist = "TopPlaylist";
         public const string TopVideo = "TopVideo";
+        public const string Track = "Track";
 
         public const string TopAlbumEmpty = "TopAlbumEmpty";
         public const string TopArtistEmpty = "TopArtistEmpty";
