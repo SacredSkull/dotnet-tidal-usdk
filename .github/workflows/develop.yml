@@ -19,8 +19,14 @@ jobs:
         DOTNET_CLI_TELEMETRY_OPTOUT: 1
     - name: Unit tests
       run: cd TidalTests && dotnet test --collect:"XPlat Code Coverage" -r coverage --settings test.runsettings
+    - name: Prep coverage
+      run: mv TidalTests/coverage/**/*.xml .
+    - name: Download Codacy
+      run: curl -Ls "https://github.com/codacy/csharp-codacy-coverage/releases/download/$CODACY_COVERAGE_VERSION/Codacy.CSharpCoverage_linux-x64" --output Codacy.CSharpCoverage_linux-x64 && chmod +x ./Codacy.CSharpCoverage_linux-x64
+      env:
+        CODACY_COVERAGE_VERSION: "1.0.8"
     - name: Publish coverage
-      run: cd TidalTests && bash upload-coverage.sh
+      run: ./Codacy.CSharpCoverage_linux-x64 -c $(git rev-parse --short "$GITHUB_SHA") -t "$CODACY_PROJECT_TOKEN" -r coverage.opencover.xml -e opencover
       env:
         CODACY_PROJECT_TOKEN: ${{ secrets.CodacyProjectToken }}
     - name: Pack release
