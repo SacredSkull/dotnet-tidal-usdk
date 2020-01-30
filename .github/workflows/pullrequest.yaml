@@ -20,7 +20,7 @@ jobs:
       env:
         CODACY_COVERAGE_VERSION: "1.0.8"
     - name: Publish coverage
-      run: ./Codacy.CSharpCoverage_linux-x64 -c $(git rev-parse --short "$GITHUB_SHA") -t "$CODACY_PROJECT_TOKEN" -r coverage.opencover.xml -e opencover
+      run: ./Codacy.CSharpCoverage_linux-x64 -c "$GITHUB_SHA" -t "$CODACY_PROJECT_TOKEN" -r coverage.opencover.xml -e opencover
       env:
         CODACY_PROJECT_TOKEN: ${{ secrets.CodacyProjectToken }}
   test-windows:
