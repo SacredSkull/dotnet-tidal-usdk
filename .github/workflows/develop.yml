@@ -17,8 +17,12 @@ jobs:
       run: dotnet build -c Release -v minimal
       env:
         DOTNET_CLI_TELEMETRY_OPTOUT: 1
-    - name: Unit Tests
-      run: dotnet test
+    - name: Unit tests
+      run: cd TidalTests && dotnet test --collect:"XPlat Code Coverage" -r coverage --settings test.runsettings
+    - name: Publish coverage
+      run: cd TidalTests && bash upload-coverage.sh
+      env:
+        CODACY_PROJECT_TOKEN: ${{ secrets.CodacyProjectToken }}
     - name: Pack release
       run: dotnet pack -c Release TidalUSDK
     - uses: actions/upload-artifact@master

@@ -12,7 +12,11 @@ jobs:
     - name: Build
       run: dotnet build -c Release -v minimal
     - name: Unit tests
-      run: dotnet test
+      run: cd TidalTests && dotnet test --collect:"XPlat Code Coverage" -r coverage --settings test.runsettings
+    - name: Publish coverage
+      run: cd TidalTests && bash upload-coverage.sh
+      env:
+        CODACY_PROJECT_TOKEN: ${{ secrets.CodacyProjectToken }}
   test-windows:
     needs: [build-test-linux]
     strategy:
