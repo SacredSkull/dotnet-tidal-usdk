@@ -26,7 +26,7 @@ namespace TidalUSDK
         private TidalLoginResponse activeLogin;
         private readonly SecureString secureUsername;
         private readonly SecureString securePassword;
-        private string token;
+        private readonly string token;
 
         /// <summary>
         ///     Paranoid? Listen to the voices in your head and pass a SecureString instead of vanilla strings.
@@ -40,7 +40,10 @@ namespace TidalUSDK
         public TidalClient(SecureString username, SecureString password, string apiToken = null)
         {
             if (apiToken == null)
+            {
                 apiToken = TidalNonces.TokenAndroid;
+            }
+
             token = apiToken;
 
             this.secureUsername = username;
@@ -60,25 +63,28 @@ namespace TidalUSDK
         public TidalClient(string username, string password, string apiToken = null)
         {
             if (apiToken == null)
+            {
                 apiToken = TidalNonces.TokenAndroid;
+            }
+
             token = apiToken;
 
             // SecureStrings will make the garbage collector's head spin
-            var secureUsername = new SecureString();
-            var securePassword = new SecureString();
+            var secUsername = new SecureString();
+            var secPassword = new SecureString();
 
             foreach (var c in username)
             {
-                secureUsername.AppendChar(c);
+                secUsername.AppendChar(c);
             }
 
             foreach (var c in password)
             {
-                securePassword.AppendChar(c);
+                secPassword.AppendChar(c);
             }
 
-            this.secureUsername = secureUsername;
-            this.securePassword = securePassword;
+            this.secureUsername = secUsername;
+            this.securePassword = secPassword;
 
             this.secureUsername.MakeReadOnly();
             this.securePassword.MakeReadOnly();
@@ -95,7 +101,7 @@ namespace TidalUSDK
         /// <param name="offset">Offset of results (NOT page number) - optional, by default 0</param>
         /// <param name="countryCode">Country code - optional, default is whatever your account uses</param>
         /// <returns></returns>
-        public async Task<TidalSearchResponse> AsyncSearch(
+        public async Task<TidalSearchResponse> SearchAsync(
             string query, TidalQueryTypes[] queryTypes, int limit = 0, int offset = 0, string countryCode = null)
         {
             var req = new TidalSearchRequest
@@ -107,7 +113,8 @@ namespace TidalUSDK
                 CountryCode = countryCode
             };
 
-            var res = await AsyncQueryAPI(TidalUrls.Search.ToString(), req);
+            var res = await QueryAPIAsync(TidalUrls.Search.ToString(), req)
+                .ConfigureAwait(false);
             try
             {
                 var json = await res.Content.ReadAsStringAsync();
@@ -128,7 +135,9 @@ namespace TidalUSDK
         /// <returns></returns>
         public Uri GetCoverUrl(Guid coverId, int width = 1280, int height = 1280)
         {
-            var url = Extensions.StringExtensions.JoinPathSegments(TidalUrls.ResourceRoot, TidalUrls.ImagesAndCovers, coverId.ToString().Replace('-', '/'), $"{width}x{height}.jpg");
+            var url = Extensions.StringExtensions.JoinPathSegments(
+                TidalUrls.ResourceRoot, TidalUrls.ImagesAndCovers, coverId.ToString().Replace('-', '/'), $"{width}x{height}.jpg");
+
             return new Uri(url);
         }
 
@@ -137,16 +146,16 @@ namespace TidalUSDK
         /// Connections are lazy-loaded, so only call this in a testing scenario.
         /// </summary>
         /// <returns></returns>
-        public async Task ForceConnect()
+        public async Task ForceConnectAsync()
         {
-            await Connect();
+            await ConnectAsync();
         }
 
         /// <summary>
         ///     This is automatically called if you make an API call
         /// </summary>
         /// <exception cref="ArgumentException"></exception>
-        private async Task Connect()
+        private async Task ConnectAsync()
         {
             if (IsConnected)
             {
@@ -174,7 +183,8 @@ namespace TidalUSDK
                     "You need to provide a password (what you gave was null, only whitespace or empty).");
             }
 
-            var result = await AsyncLogin(username, password);
+            var result = await LoginAsync(username, password)
+                .ConfigureAwait(false);
             result.EnsureSuccessStatusCode();
 
             try
@@ -194,7 +204,7 @@ namespace TidalUSDK
         /// <summary>
         ///     Performs the login request, most importantly, retrieving the Session ID
         /// </summary>
-        private async Task<HttpResponseMessage> AsyncLogin(string username, string password)
+        private static async Task<HttpResponseMessage> LoginAsync(string username, string password)
         {
             var url = new Url(TidalUrls.BaseAPI);
             return await url
@@ -208,11 +218,12 @@ namespace TidalUSDK
                 });
         }
 
-        [Obsolete]
-        public async Task<HttpResponseMessage> AsyncDebugQueryAPI(string relativeUri)
+        [Obsolete("Used specifically to test new/changed APIs, not for general purpose use.")]
+        public async Task<HttpResponseMessage> DebugQueryAPIAsync(string relativeUri)
         {
             //BUG: remove this
-            return await AsyncQueryAPI(relativeUri);
+            return await QueryAPIAsync(relativeUri)
+                .ConfigureAwait(false);
         }
 
         /// <summary>
@@ -223,11 +234,11 @@ namespace TidalUSDK
         /// <param name="countryCode">Country code</param>
         /// <param name="baseUrl">Base URL to work from</param>
         /// <returns>TIDAL Response</returns>
-        private async Task<HttpResponseMessage> AsyncQueryAPI(string relativeUri, TidalRequest request = null, Uri baseUrl = null)
+        private async Task<HttpResponseMessage> QueryAPIAsync(string relativeUri, TidalRequest request = null, Uri baseUrl = null)
         {
             if (!IsConnected)
             {
-                await Connect();
+                await ConnectAsync();
             }
 
             if (request == null)
@@ -239,8 +250,9 @@ namespace TidalUSDK
             request.SetDefaults(activeLogin.CountryCode);
 
             // Convert request to JSON and submit request
-            var url = new Url(baseUrl == null ? TidalUrls.BaseAPI : baseUrl);
-            return await AsyncGet(url.AppendPathSegment(relativeUri.TrimStart('/')), request);
+            var url = new Url(baseUrl?? TidalUrls.BaseAPI);
+            return await AsyncGet(url.AppendPathSegment(relativeUri.TrimStart('/')), request)
+                .ConfigureAwait(false);
         }
 
         /// <summary>
@@ -251,11 +263,15 @@ namespace TidalUSDK
         /// <param name="body">String body</param>
         /// <param name="baseUrl">Base URL to work from</param>
         /// <returns>TIDAL Response</returns>
-        private async Task<HttpResponseMessage> AsyncPostAPI(string relativeUri, TidalEmptyRequest request = null, TidalEmptyBody body = null, Uri baseUrl = null)
+        private async Task<HttpResponseMessage> PostAPIAsync(
+            string relativeUri,
+            TidalEmptyRequest request = null,
+            TidalEmptyBody body = null,
+            Uri baseUrl = null)
         {
             if (!IsConnected)
             {
-                await Connect();
+                await ConnectAsync();
             }
 
             if (request == null)
@@ -267,8 +283,9 @@ namespace TidalUSDK
             request.SetDefaults(activeLogin.CountryCode);
 
             // Convert request to JSON and submit request
-            var url = new Url(baseUrl == null ? TidalUrls.BaseAPI : baseUrl);
-            return await AsyncPost(url.AppendPathSegment(relativeUri.TrimStart('/')), request, body);
+            var url = new Url(baseUrl ?? TidalUrls.BaseAPI);
+            return await PostAsync(url.AppendPathSegment(relativeUri.TrimStart('/')), request, body)
+                .ConfigureAwait(false);
         }
 
         /// <summary>
@@ -279,11 +296,15 @@ namespace TidalUSDK
         /// <param name="body">String body</param>
         /// <param name="baseUrl">Base URL to work from</param>
         /// <returns>TIDAL Response</returns>
-        private async Task<HttpResponseMessage> AsyncDeleteAPI(string relativeUri, TidalRequest request = null, TidalEmptyBody body = null, Uri baseUrl = null)
+        private async Task<HttpResponseMessage> DeleteAPIAsync(
+            string relativeUri,
+            TidalRequest request = null,
+            TidalEmptyBody body = null,
+            Uri baseUrl = null)
         {
             if (!IsConnected)
             {
-                await Connect();
+                await ConnectAsync();
             }
 
             if (request == null)
@@ -295,8 +316,9 @@ namespace TidalUSDK
             request.SetDefaults(activeLogin.CountryCode);
 
             // Convert request to JSON and submit request
-            var url = new Url(baseUrl == null ? TidalUrls.BaseAPI : baseUrl);
-            return await AsyncDelete(url.AppendPathSegment(relativeUri.TrimStart('/')), request, body);
+            var url = new Url(baseUrl ?? TidalUrls.BaseAPI);
+            return await DeleteAsync(url.AppendPathSegment(relativeUri.TrimStart('/')), request, body)
+                .ConfigureAwait(false);
         }
 
         /// <summary>
@@ -306,11 +328,11 @@ namespace TidalUSDK
         /// <param name="url">The URI</param>
         /// <param name="body">POST body, as a string</param>
         /// <returns>TIDAL Response</returns>
-        private async Task<HttpResponseMessage> AsyncPost(Url url, object query, TidalEmptyBody body)
+        private async Task<HttpResponseMessage> PostAsync(Url url, object query, TidalEmptyBody body)
         {
             if (!IsConnected)
             {
-                await Connect();
+                await ConnectAsync();
             }
 
             var json = JsonConvert.SerializeObject(query);
@@ -326,17 +348,17 @@ namespace TidalUSDK
         }
 
         /// <summary>
-        ///     A very low level API call function that just performs connection checks, appends the URI to the base TIDAL URL
-        ///     and constructs the request.
+        ///     Sends DELETE HTTP request to the specified URL with query/body
         /// </summary>
         /// <param name="url">The URI</param>
+        /// <param name="query">Query as dictionary</param>
         /// <param name="body">POST body, as a string</param>
         /// <returns>TIDAL Response</returns>
-        private async Task<HttpResponseMessage> AsyncDelete(Url url, object query, TidalEmptyBody body)
+        private async Task<HttpResponseMessage> DeleteAsync(Url url, object query, TidalEmptyBody body)
         {
             if (!IsConnected)
             {
-                await Connect();
+                await ConnectAsync();
             }
 
             var json = JsonConvert.SerializeObject(query);
@@ -352,7 +374,8 @@ namespace TidalUSDK
         {
             if (!IsConnected)
             {
-                await Connect();
+                await ConnectAsync()
+                    .ConfigureAwait(false);
             }
 
             var json = JsonConvert.SerializeObject(query);

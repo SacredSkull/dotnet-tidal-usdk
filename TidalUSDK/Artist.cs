@@ -16,8 +16,8 @@ namespace TidalUSDK
         /// <summary>
         ///     Get artist information, not including bio.
         ///     See also:
-        ///     <seealso cref="AsyncGetArtistBio" />
-        ///     <seealso cref="AsyncGetArtistTopTracks" />
+        ///     <seealso cref="GetArtistBioAsync" />
+        ///     <seealso cref="GetArtistTopTracksAsync" />
         /// </summary>
         /// <param name="artistId">The artist's TIDAL ID</param>
         /// <param name="filterType">Query type(s) you wish to filterTypes by</param>
@@ -25,7 +25,7 @@ namespace TidalUSDK
         /// <param name="offset">Offset of results (NOT page number) - optional, by default 0</param>
         /// <param name="countryCode">Country code - optional, default is whatever your account uses</param>
         /// <returns></returns>
-        public async Task<TidalArtist> AsyncGetArtist(
+        public async Task<TidalArtist> GetArtistAsync(
             string artistId, IEnumerable<TidalFilterTypes> filterType = null, int limit = 0, int offset = 0, string countryCode = null)
         {
             var req = new TidalArtistRequest
@@ -37,7 +37,7 @@ namespace TidalUSDK
             };
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Artists, artistId);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
             try
             {
                 var json = await result.Content.ReadAsStringAsync();
@@ -58,7 +58,7 @@ namespace TidalUSDK
         /// <param name="offset">Offset of results (NOT page number) - optional, by default 0</param>
         /// <param name="countryCode">Country code - optional, default is whatever your account uses</param>
         /// <returns></returns>
-        public async Task<TidalArtistVideosResponse> AsyncGetArtistVideos(
+        public async Task<TidalArtistVideosResponse> GetArtistVideosAsync(
             string artistId, IEnumerable<TidalFilterTypes> filterType = null, int limit = 0, int offset = 0, string countryCode = null)
         {
             var req = new TidalFilterableRequest
@@ -70,7 +70,7 @@ namespace TidalUSDK
             };
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Artists, artistId, TidalUrls.Videos);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
             try
             {
                 var json = await result.Content.ReadAsStringAsync();
@@ -78,7 +78,8 @@ namespace TidalUSDK
             }
             catch (JsonException e)
             {
-                throw new HttpRequestException($"The JSON returned by TIDAL for retrieving artist '{artistId}' does not appear to be valid. {e.Message}");
+                throw new HttpRequestException(
+                    $"The JSON returned by TIDAL for retrieving artist '{artistId}' does not appear to be valid. {e.Message}");
             }
         }
 
@@ -88,7 +89,7 @@ namespace TidalUSDK
         /// <param name="artistId">The artist (name or ID)</param>
         /// <param name="countryCode">Country code - optional, default is whatever your account uses</param>
         /// <returns></returns>
-        public async Task<TidalArtistBio> AsyncGetArtistBio(string artistId, string countryCode = null)
+        public async Task<TidalArtistBio> GetArtistBioAsync(string artistId, string countryCode = null)
         {
             var req = new TidalRequest
             {
@@ -96,7 +97,7 @@ namespace TidalUSDK
             };
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Artists, artistId, TidalUrls.Bio);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
             try
             {
                 var json = await result.Content.ReadAsStringAsync();
@@ -104,11 +105,12 @@ namespace TidalUSDK
             }
             catch (JsonException e)
             {
-                throw new HttpRequestException($"The JSON returned by TIDAL for retrieving artist '{artistId}' does not appear to be valid. {e.Message}");
+                throw new HttpRequestException(
+                    $"The JSON returned by TIDAL for retrieving artist '{artistId}' does not appear to be valid. {e.Message}");
             }
         }
 
-        public async Task<TidalArtistAlbumsResponse> AsyncGetArtistAlbums(
+        public async Task<TidalArtistAlbumsResponse> GetArtistAlbumsAsync(
             string artistId, string countryCode = null, int limit = 999, TidalFilterTypes[] filterTypes = null, int offset = 0)
         {
             var req = new TidalFilterableRequest
@@ -120,7 +122,7 @@ namespace TidalUSDK
             };
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Artists, artistId, TidalUrls.Albums);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
             try
             {
                 var json = await result.Content.ReadAsStringAsync();
@@ -145,7 +147,7 @@ namespace TidalUSDK
         /// <remarks>
         ///     This API call seems to have a max limit of 50, so it's set to that by default
         /// </remarks>
-        public async Task<TidalSimilarArtistsResponse> AsyncGetSimilarArtists(
+        public async Task<TidalSimilarArtistsResponse> GetSimilarArtistsAsync(
             string artistId, string countryCode = null, int limit = 50, TidalFilterTypes[] filterTypes = null, int offset = 0)
         {
             var req = new TidalFilterableRequest
@@ -157,7 +159,7 @@ namespace TidalUSDK
             };
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Artists, artistId, TidalUrls.Similar);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
             try
             {
                 var json = await result.Content.ReadAsStringAsync();
@@ -165,7 +167,8 @@ namespace TidalUSDK
             }
             catch (JsonException e)
             {
-                throw new HttpRequestException($"The JSON returned by TIDAL for retrieving artist's '{artistId}' albums does not appear to be valid. {e.Message}");
+                throw new HttpRequestException(
+                    $"The JSON returned by TIDAL for retrieving artist's '{artistId}' albums does not appear to be valid. {e.Message}");
             }
         }
 
@@ -178,7 +181,7 @@ namespace TidalUSDK
         /// <param name="offset">Offset of results (NOT page number) - optional, by default 0</param>
         /// <param name="countryCode">Country code - optional, default is whatever your account uses</param>
         /// <returns>TidalTopTracksResponse object</returns>
-        public async Task<TidalTopTracksResponse> AsyncGetArtistTopTracks(
+        public async Task<TidalTopTracksResponse> GetArtistTopTracksAsync(
             string artistId, IEnumerable<TidalFilterTypes> filterType = null, int limit = 10, int offset = 0, string countryCode = null)
         {
             var req = new TidalArtistRequest
@@ -190,7 +193,7 @@ namespace TidalUSDK
             };
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Artists, artistId, TidalUrls.TopTracks);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
             try
             {
                 var json = await result.Content.ReadAsStringAsync();
@@ -198,7 +201,8 @@ namespace TidalUSDK
             }
             catch (JsonException e)
             {
-                throw new HttpRequestException($"The JSON returned by TIDAL for retrieving this artist's ({artistId}) top tracks does not appear to be valid. {e.Message}");
+                throw new HttpRequestException(
+                    $"The JSON returned by TIDAL for retrieving this artist's ({artistId}) top tracks does not appear to be valid. {e.Message}");
             }
         }
     }

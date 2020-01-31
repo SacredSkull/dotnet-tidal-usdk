@@ -17,7 +17,7 @@ namespace TidalUSDK
             return this.activeLogin.UserId;
         }
 
-        public async Task<TidalFavouriteArtistResponse> AsyncGetMyFavouriteArtists(
+        public async Task<TidalFavouriteArtistResponse> GetMyFavouriteArtistsAsync(
             int limit = 50, string countryCode = null, int offset = 0)
         {
             var req = new TidalPaginatedRequest
@@ -29,7 +29,7 @@ namespace TidalUSDK
 
             var url = StringExtensions.JoinPathSegments(
                 TidalUrls.Users, this.activeLogin.UserId, TidalUrls.UserFavouriteArtists);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
 
             try
             {
@@ -38,11 +38,12 @@ namespace TidalUSDK
             }
             catch (JsonException e)
             {
-                throw new HttpRequestException($"The JSON returned by TIDAL for retrieving your favourited artists does not appear to be valid. {e.Message}");
+                throw new HttpRequestException(
+                    $"The JSON returned by TIDAL for retrieving your favourited artists does not appear to be valid. {e.Message}");
             }
         }
 
-        public async Task<TidalFavouriteAlbumResponse> AsyncGetMyFavouriteAlbums(
+        public async Task<TidalFavouriteAlbumResponse> GetMyFavouriteAlbumsAsync(
             int limit = 10, string countryCode = null, int offset = 0)
         {
             var req = new TidalPaginatedRequest
@@ -54,7 +55,7 @@ namespace TidalUSDK
 
             var url = StringExtensions.JoinPathSegments(
                 TidalUrls.Users, this.activeLogin.UserId, TidalUrls.UserFavouriteAlbums);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
 
             try
             {
@@ -63,12 +64,17 @@ namespace TidalUSDK
             }
             catch (JsonException e)
             {
-                throw new HttpRequestException($"The JSON returned by TIDAL for retrieving your favourited albums does not appear to be valid. {e.Message}");
+                throw new HttpRequestException(
+                    $"The JSON returned by TIDAL for retrieving your favourited albums does not appear to be valid. {e.Message}");
             }
         }
 
-        public async Task<TidalFavouriteTracksResponse> AsyncGetMyFavouriteTracks(
-            int limit = 10, string countryCode = null, int offset = 0, TidalOrderingEnum order = TidalOrderingEnum.NAME, TidalOrderingDirectionEnum orderDirection = null)
+        public async Task<TidalFavouriteTracksResponse> GetMyFavouriteTracksAsync(
+            int limit = 10,
+            string countryCode = null,
+            int offset = 0,
+            TidalOrderingEnum order = TidalOrderingEnum.NAME,
+            TidalOrderingDirectionEnum orderDirection = null)
         {
             var req = new TidalOrderableRequest
             {
@@ -81,7 +87,7 @@ namespace TidalUSDK
 
             var url = StringExtensions.JoinPathSegments(
                 TidalUrls.Users, this.activeLogin.UserId, TidalUrls.UserFavouriteTracks);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
 
             try
             {
@@ -90,12 +96,17 @@ namespace TidalUSDK
             }
             catch (JsonException e)
             {
-                throw new HttpRequestException($"The JSON returned by TIDAL for retrieving your favourited tracks does not appear to be valid. {e.Message}");
+                throw new HttpRequestException(
+                    $"The JSON returned by TIDAL for retrieving your favourited tracks does not appear to be valid. {e.Message}");
             }
         }
 
-        public async Task<TidalFavouriteVideosResponse> AsyncGetMyFavouriteVideos(
-            int limit = 10, string countryCode = null, int offset = 0, TidalOrderingEnum order = TidalOrderingEnum.NAME, TidalOrderingDirectionEnum orderDirection = null)
+        public async Task<TidalFavouriteVideosResponse> GetMyFavouriteVideosAsync(
+            int limit = 10,
+            string countryCode = null,
+            int offset = 0,
+            TidalOrderingEnum order = TidalOrderingEnum.NAME,
+            TidalOrderingDirectionEnum orderDirection = null)
         {
             var req = new TidalOrderableRequest
             {
@@ -108,7 +119,7 @@ namespace TidalUSDK
 
             var url = StringExtensions.JoinPathSegments(
                 TidalUrls.Users, this.activeLogin.UserId, TidalUrls.UserFavouriteVideos);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
 
             try
             {
@@ -117,12 +128,17 @@ namespace TidalUSDK
             }
             catch (JsonException e)
             {
-                throw new HttpRequestException($"The JSON returned by TIDAL for retrieving your favourited tracks does not appear to be valid. {e.Message}");
+                throw new HttpRequestException(
+                    $"The JSON returned by TIDAL for retrieving your favourited tracks does not appear to be valid. {e.Message}");
             }
         }
 
-        public async Task<TidalMyPlaylistsResponse> AsyncGetMyPlaylists(
-            int limit = 10, string countryCode = null, int offset = 0, TidalOrderingEnum order = TidalOrderingEnum.NAME, TidalOrderingDirectionEnum orderDirection = null)
+        public async Task<TidalMyPlaylistsResponse> GetMyPlaylistsAsync(
+            int limit = 10,
+            string countryCode = null,
+            int offset = 0,
+            TidalOrderingEnum order = TidalOrderingEnum.NAME,
+            TidalOrderingDirectionEnum orderDirection = null)
         {
             var req = new TidalOrderableRequest
             {
@@ -135,7 +151,7 @@ namespace TidalUSDK
 
             var url = StringExtensions.JoinPathSegments(
                 TidalUrls.Users, this.activeLogin.UserId, TidalUrls.MyPlaylistsAndFavourited);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
 
             try
             {
@@ -144,16 +160,17 @@ namespace TidalUSDK
             }
             catch (JsonException e)
             {
-                throw new HttpRequestException($"The JSON returned by TIDAL for retrieving your playlists does not appear to be valid. {e.Message}");
+                throw new HttpRequestException(
+                    $"The JSON returned by TIDAL for retrieving your playlists does not appear to be valid. {e.Message}");
             }
         }
 
-        public async Task<TidalUser> AsyncGetUser(string userId)
+        public async Task<TidalUser> GetUserAsync(string userId)
         {
             var req = new TidalRequest();
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Users, userId);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
 
             try
             {
@@ -162,7 +179,8 @@ namespace TidalUSDK
             }
             catch (JsonException e)
             {
-                throw new HttpRequestException($"The JSON returned by TIDAL for retrieving this user ({userId}) does not appear to be valid. {e.Message}");
+                throw new HttpRequestException(
+                    $"The JSON returned by TIDAL for retrieving this user ({userId}) does not appear to be valid. {e.Message}");
             }
         }
     }

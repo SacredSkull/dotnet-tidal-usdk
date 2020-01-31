@@ -16,15 +16,15 @@ namespace TidalTests
         {
             // empty username as string
             Client = new TidalClient("", "");
-            Assert.ThrowsAsync<ArgumentException>(async () => await Client.ForceConnect());
+            Assert.ThrowsAsync<ArgumentException>(async () => await Client.ForceConnectAsync());
 
             // empty password as string
             Client = new TidalClient("hello", "");
-            Assert.ThrowsAsync<ArgumentException>(async () => await Client.ForceConnect());
+            Assert.ThrowsAsync<ArgumentException>(async () => await Client.ForceConnectAsync());
 
             // empty username as SecureString
             Client = new TidalClient(new SecureString(), new SecureString());
-            Assert.ThrowsAsync<ArgumentException>(async () => await Client.ForceConnect());
+            Assert.ThrowsAsync<ArgumentException>(async () => await Client.ForceConnectAsync());
 
             // empty password as SecureString
             var secureUsername = new SecureString();
@@ -36,13 +36,13 @@ namespace TidalTests
             secureUsername.AppendChar('r');
             secureUsername.AppendChar('e');
             Client = new TidalClient(secureUsername, new SecureString());
-            Assert.ThrowsAsync<ArgumentException>(async () => await Client.ForceConnect());
+            Assert.ThrowsAsync<ArgumentException>(async () => await Client.ForceConnectAsync());
         }
 
         [Test]
         public async Task TestLogin()
         {
-            await Client.ForceConnect();
+            await Client.ForceConnectAsync();
 
             HttpTest
                 .ShouldHaveCalled("*/login/username")

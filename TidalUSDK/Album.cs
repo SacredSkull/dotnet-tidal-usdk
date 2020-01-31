@@ -12,7 +12,7 @@ namespace TidalUSDK
 {
     public partial class TidalClient
     {
-        public async Task<TidalAlbum> AsyncGetAlbum(
+        public async Task<TidalAlbum> GetAlbumAsync(
             string albumId, string countryCode = null, int limit = 999, TidalFilterTypes[] filterTypes = null, int offset = 0)
         {
             var req = new TidalFilterableRequest
@@ -24,7 +24,7 @@ namespace TidalUSDK
             };
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Albums, albumId);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
             try
             {
                 var json = await result.Content.ReadAsStringAsync();
@@ -36,7 +36,7 @@ namespace TidalUSDK
             }
         }
 
-        public async Task<TidalAlbumTracks> AsyncGetAlbumTracks(
+        public async Task<TidalAlbumTracks> GetAlbumTracksAsync(
             string albumId, string countryCode = null, int limit = 999, TidalFilterTypes[] filterTypes = null, int offset = 0)
         {
             var req = new TidalFilterableRequest
@@ -48,7 +48,7 @@ namespace TidalUSDK
             };
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Albums, albumId, TidalUrls.Tracks);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
             try
             {
                 var json = await result.Content.ReadAsStringAsync();

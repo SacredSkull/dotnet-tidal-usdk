@@ -1,11 +1,8 @@
 using System.Net.Http;
-using System.Text.Json;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using TidalTest.Enums;
-using TidalUSDK;
+using TidalTests.Enums;
 using TidalUSDK.Constants;
-using TidalUSDK.Entities;
 
 namespace TidalTests
 {
@@ -18,7 +15,7 @@ namespace TidalTests
         {
             HttpTest.RespondWithJsonStub(TestJSONFileNames.Track);
 
-            var track = await Client.AsyncGetTrack(TrackId);
+            var track = await Client.GetTrackAsync(TrackId);
 
             HttpTest.ShouldHaveCalled($"*{TidalUrls.Tracks}*{TrackId}");
             Assert.AreEqual("in the presence of enemies, pt. 1", track.Title.ToLower());
@@ -28,7 +25,7 @@ namespace TidalTests
         public async Task GetInvalidTrackResponse()
         {
             HttpTest.RespondWithJsonString("/\\/");
-            Assert.ThrowsAsync<HttpRequestException>(async () => await Client.AsyncGetTrack(TrackId));
+            Assert.ThrowsAsync<HttpRequestException>(async () => await Client.GetTrackAsync(TrackId));
         }
     }
 }

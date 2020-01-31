@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace TidalUSDK.Responses
 {
-    public abstract class TidalPaginatedResponse<T>
+    public class TidalPaginatedResponse<T>
     {
         [JsonProperty("limit")]
         public virtual int Limit { get; set; }

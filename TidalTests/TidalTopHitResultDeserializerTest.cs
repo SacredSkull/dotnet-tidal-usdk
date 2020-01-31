@@ -1,7 +1,6 @@
 using Newtonsoft.Json;
 using NUnit.Framework;
-using TidalTest;
-using TidalTest.Enums;
+using TidalTests.Enums;
 using TidalUSDK.Entities;
 using TidalUSDK.Enums;
 

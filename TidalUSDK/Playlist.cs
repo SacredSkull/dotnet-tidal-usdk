@@ -13,7 +13,7 @@ namespace TidalUSDK
 {
     public partial class TidalClient
     {
-        public async Task<TidalPlaylist> AsyncGetPlaylist(
+        public async Task<TidalPlaylist> GetPlaylistAsync(
             Guid playlistId, string countryCode = null, int limit = 999, int offset = 0)
         {
             var req = new TidalPaginatedRequest
@@ -24,7 +24,7 @@ namespace TidalUSDK
             };
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Playlists, playlistId);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
 
             try
             {
@@ -46,7 +46,7 @@ namespace TidalUSDK
         /// <param name="offset"></param>
         /// <returns></returns>
         /// <exception cref="HttpRequestException"></exception>
-        public async Task<TidalPlaylistRecommendationsResponse> AsyncGetPlaylistRecommendations(
+        public async Task<TidalPlaylistRecommendationsResponse> GetPlaylistRecommendationsAsync(
             Guid playlistId, string countryCode = null, int limit = 50, int offset = 0)
         {
             var req = new TidalPaginatedRequest
@@ -57,7 +57,7 @@ namespace TidalUSDK
             };
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Playlists, playlistId, TidalUrls.PlaylistRecommendations);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
 
             try
             {
@@ -70,7 +70,7 @@ namespace TidalUSDK
             }
         }
 
-        public async Task<TidalPlaylistTracksResponse> AsyncGetPlaylistTracks(
+        public async Task<TidalPlaylistTracksResponse> GetPlaylistTracksAsync(
             Guid playlistId, string countryCode = null, int limit = 999, TidalFilterTypes[] filterTypes = null, int offset = 0)
         {
             var req = new TidalFilterableRequest
@@ -82,7 +82,7 @@ namespace TidalUSDK
             };
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Playlists, playlistId, TidalUrls.Tracks);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
 
             try
             {

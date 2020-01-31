@@ -20,7 +20,7 @@ namespace TidalUSDK
         /// <param name="countryCode">Country code</param>
         /// <returns>TidalTrackResponse / TidalTrack</returns>
         /// <exception cref="HttpRequestException">If JSON is invalid</exception>
-        public async Task<TidalTrack> AsyncGetTrack(string trackId, string countryCode = null)
+        public async Task<TidalTrack> GetTrackAsync(string trackId, string countryCode = null)
         {
             var req = new TidalRequest
             {
@@ -28,7 +28,7 @@ namespace TidalUSDK
             };
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Tracks, trackId);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
             try
             {
                 var json = await result.Content.ReadAsStringAsync();
@@ -36,7 +36,8 @@ namespace TidalUSDK
             }
             catch (JsonException e)
             {
-                throw new HttpRequestException($"The JSON returned by TIDAL for retrieving track info ID: {trackId} does not appear to be valid. {e.Message}");
+                throw new HttpRequestException(
+                    $"The JSON returned by TIDAL for retrieving track info ID: {trackId} does not appear to be valid. {e.Message}");
             }
         }
 
@@ -48,7 +49,10 @@ namespace TidalUSDK
         /// <param name="countryCode">Country code</param>
         /// <returns>The streaming URL for the given track</returns>
         /// <exception cref="HttpRequestException">Invalid JSON returned</exception>
-        public async Task<TidalTrackStreamingURLResponse> AsyncGetTrackStreamingURL(string trackId, TidalStreamingQualityEnum streamQuality, string countryCode = null)
+        public async Task<TidalTrackStreamingURLResponse> GetTrackStreamingURLAsync(
+            string trackId,
+            TidalStreamingQualityEnum streamQuality,
+            string countryCode = null)
         {
             var req = new TidalStreamingRequest
             {
@@ -57,7 +61,7 @@ namespace TidalUSDK
             };
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Tracks, trackId, TidalUrls.TrackStreamingURL);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
             try
             {
                 var json = await result.Content.ReadAsStringAsync();
@@ -65,7 +69,8 @@ namespace TidalUSDK
             }
             catch (JsonException e)
             {
-                throw new HttpRequestException($"The JSON returned by TIDAL for retrieving track info ID: {trackId} does not appear to be valid. {e.Message}");
+                throw new HttpRequestException(
+                    $"The JSON returned by TIDAL for retrieving track info ID: {trackId} does not appear to be valid. {e.Message}");
             }
         }
 
@@ -77,7 +82,10 @@ namespace TidalUSDK
         /// <param name="countryCode">Country code</param>
         /// <returns>The streaming URL for the given track</returns>
         /// <exception cref="HttpRequestException">Invalid JSON returned</exception>
-        public async Task<TidalTrackStreamingURLResponse> AsyncGetTrackOfflineStreamingURL(string trackId, TidalStreamingQualityEnum streamQuality, string countryCode = null)
+        public async Task<TidalTrackStreamingURLResponse> GetTrackOfflineStreamingURLAsync(
+            string trackId,
+            TidalStreamingQualityEnum streamQuality,
+            string countryCode = null)
         {
             var req = new TidalStreamingRequest
             {
@@ -86,7 +94,7 @@ namespace TidalUSDK
             };
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Tracks, trackId, TidalUrls.OfflineStreamingURL);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
             try
             {
                 var json = await result.Content.ReadAsStringAsync();
@@ -94,7 +102,8 @@ namespace TidalUSDK
             }
             catch (JsonException e)
             {
-                throw new HttpRequestException($"The JSON returned by TIDAL for retrieving track info ID: {trackId} does not appear to be valid. {e.Message}");
+                throw new HttpRequestException(
+                    $"The JSON returned by TIDAL for retrieving track info ID: {trackId} does not appear to be valid. {e.Message}");
             }
         }
 
@@ -110,7 +119,7 @@ namespace TidalUSDK
         ///     The TIDAL app has its own library cache, so it might seem like you haven't changed anything.
         ///     Open a web player (i.e. listen.tidal.com) and you should see the new library change.
         /// </remarks>
-        public async Task<HttpResponseMessage> AsyncAddTrackToMyLibrary(string trackId, string countryCode = null)
+        public async Task<HttpResponseMessage> AddTrackToMyLibraryAsync(string trackId, string countryCode = null)
         {
             var req = new TidalRequest
             {
@@ -123,7 +132,7 @@ namespace TidalUSDK
             };
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Users, this.activeLogin.UserId, TidalUrls.UserFavouriteTracks);
-            return await AsyncPostAPI(url, req, body);
+            return await PostAPIAsync(url, req, body);
         }
 
         /// <summary>
@@ -138,7 +147,7 @@ namespace TidalUSDK
         ///     The TIDAL app has its own library cache, so it might seem like you haven't changed anything.
         ///     Open a web player (i.e. listen.tidal.com) and you should see the new library change.
         /// </remarks>
-        public async Task<HttpResponseMessage> AsyncRemoveTrackFromMyLibrary(string trackId, string countryCode = null)
+        public async Task<HttpResponseMessage> RemoveTrackFromMyLibraryAsync(string trackId, string countryCode = null)
         {
             var req = new TidalRequest
             {
@@ -152,7 +161,7 @@ namespace TidalUSDK
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Users, this.activeLogin.UserId,
                 TidalUrls.UserFavouriteTracks, trackId);
-            return await AsyncDeleteAPI(url, req, body);
+            return await DeleteAPIAsync(url, req, body);
         }
     }
 }

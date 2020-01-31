@@ -16,7 +16,7 @@ namespace TidalUSDK
         /// <param name="videoId">The artist's TIDAL ID</param>
         /// <param name="countryCode">Country code - optional, default is whatever your account uses</param>
         /// <returns></returns>
-        public async Task<TidalVideo> AsyncGetVideo(string videoId, string countryCode = null)
+        public async Task<TidalVideo> GetVideoAsync(string videoId, string countryCode = null)
         {
             var req = new TidalRequest
             {
@@ -24,7 +24,7 @@ namespace TidalUSDK
             };
 
             var url = StringExtensions.JoinPathSegments(TidalUrls.Videos, videoId);
-            var result = await AsyncQueryAPI(url, req);
+            var result = await QueryAPIAsync(url, req);
             try
             {
                 var json = await result.Content.ReadAsStringAsync();

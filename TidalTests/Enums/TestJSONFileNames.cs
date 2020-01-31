@@ -1,18 +1,28 @@
-namespace TidalTest.Enums
+namespace TidalTests.Enums
 {
     public static class TestJSONFileNames
     {
-        public const string TopAlbum = "TopAlbum";
-        public const string TopArtist = "TopArtist";
-        public const string TopTrack = "TopTrack";
-        public const string TopPlaylist = "TopPlaylist";
-        public const string TopVideo = "TopVideo";
-        public const string Track = "Track";
+        //
+        // True to life, populated data
+        //
 
-        public const string TopAlbumEmpty = "TopAlbumEmpty";
-        public const string TopArtistEmpty = "TopArtistEmpty";
-        public const string TopTrackEmpty = "TopTrackEmpty";
-        public const string TopPlaylistEmpty = "TopPlaylistEmpty";
-        public const string TopVideoEmpty = "TopVideoEmpty";
+        public static string TopAlbum => "TopAlbum";
+        public static string TopArtist => "TopArtist";
+        public static string TopTrack => "TopTrack";
+        public static string TopPlaylist => "TopPlaylist";
+        public static string TopVideo => "TopVideo";
+        public static string Track => "Track";
+        public static string Search => "Search";
+
+        //
+        // Valid, but empty data
+        //
+
+        public static string TopAlbumEmpty => "TopAlbumEmpty";
+        public static string TopArtistEmpty => "TopArtistEmpty";
+        public static string TopTrackEmpty => "TopTrackEmpty";
+        public static string TopPlaylistEmpty => "TopPlaylistEmpty";
+        public static string TopVideoEmpty => "TopVideoEmpty";
+        public static string SearchEmpty => "SearchEmpty";
     }
 }

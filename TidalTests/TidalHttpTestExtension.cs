@@ -9,15 +9,6 @@ namespace TidalTests
     {
         private const string BaseDirectory = "Data";
 
-        private static string GetJSONData(string fileName)
-        {
-            if (!fileName.EndsWith(".json"))
-                fileName += ".json";
-
-            var path = Path.Join(TestContext.CurrentContext.TestDirectory, BaseDirectory, fileName);
-            return File.ReadAllText(path);
-        }
-
         public static HttpTest RespondWithJsonString(
             this HttpTest httpTest,
             string jsonString,
@@ -39,6 +30,15 @@ namespace TidalTests
             Dictionary<object, object> headers = null)
         {
             return httpTest.RespondWithJsonString(GetJSONData(fileName), statusCode, headers);
+        }
+
+        private static string GetJSONData(string fileName)
+        {
+            if (!fileName.EndsWith(".json"))
+                fileName += ".json";
+
+            var path = Path.Join(TestContext.CurrentContext.TestDirectory, BaseDirectory, fileName);
+            return File.ReadAllText(path);
         }
     }
 }
