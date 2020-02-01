@@ -7,7 +7,7 @@ using TidalUSDK;
 
 namespace TidalTests
 {
-    public class TidalTest : BaseHttpTest
+    public class TidalClientTest : BaseHttpTest
     {
         protected const string TokenHeader = "X-Tidal-Token";
 

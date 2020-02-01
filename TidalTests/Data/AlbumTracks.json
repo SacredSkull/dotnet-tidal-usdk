@@ -1,0 +1,343 @@
+{
+    "limit": 999,
+    "offset": 0,
+    "totalNumberOfItems": 8,
+    "items": [
+        {
+            "id": 68574405,
+            "title": "In the Presence of Enemies, Pt. 1",
+            "duration": 540,
+            "replayGain": -6.99,
+            "peak": 0.992004,
+            "allowStreaming": true,
+            "streamReady": true,
+            "streamStartDate": "2014-06-02T00:00:00.000+0000",
+            "premiumStreamingOnly": false,
+            "trackNumber": 1,
+            "volumeNumber": 1,
+            "version": null,
+            "popularity": 4,
+            "copyright": "2007 The All Blacks B.V. Issued under license to Roadrunner Records from the The All Blacks B.V.",
+            "url": "http://www.tidal.com/track/68574405",
+            "isrc": "NLA321392925",
+            "editable": false,
+            "explicit": false,
+            "audioQuality": "HI_RES",
+            "audioModes": [
+                "STEREO"
+            ],
+            "artist": {
+                "id": 14670,
+                "name": "Dream Theater",
+                "type": "MAIN"
+            },
+            "artists": [
+                {
+                    "id": 14670,
+                    "name": "Dream Theater",
+                    "type": "MAIN"
+                }
+            ],
+            "album": {
+                "id": 68574404,
+                "title": "Systematic Chaos",
+                "cover": "917750da-8637-4341-a9c1-8d411300c46e",
+                "videoCover": null
+            }
+        },
+        {
+            "id": 68574406,
+            "title": "Forsaken",
+            "duration": 335,
+            "replayGain": -6.99,
+            "peak": 0.983429,
+            "allowStreaming": true,
+            "streamReady": true,
+            "streamStartDate": "2014-06-02T00:00:00.000+0000",
+            "premiumStreamingOnly": false,
+            "trackNumber": 2,
+            "volumeNumber": 1,
+            "version": null,
+            "popularity": 4,
+            "copyright": "2007 The All Blacks B.V. Issued under license to Roadrunner Records from the The All Blacks B.V.",
+            "url": "http://www.tidal.com/track/68574406",
+            "isrc": "NLA321392926",
+            "editable": false,
+            "explicit": false,
+            "audioQuality": "HI_RES",
+            "audioModes": [
+                "STEREO"
+            ],
+            "artist": {
+                "id": 14670,
+                "name": "Dream Theater",
+                "type": "MAIN"
+            },
+            "artists": [
+                {
+                    "id": 14670,
+                    "name": "Dream Theater",
+                    "type": "MAIN"
+                }
+            ],
+            "album": {
+                "id": 68574404,
+                "title": "Systematic Chaos",
+                "cover": "917750da-8637-4341-a9c1-8d411300c46e",
+                "videoCover": null
+            }
+        },
+        {
+            "id": 68574407,
+            "title": "Constant Motion",
+            "duration": 415,
+            "replayGain": -6.99,
+            "peak": 0.979736,
+            "allowStreaming": true,
+            "streamReady": true,
+            "streamStartDate": "2014-06-02T00:00:00.000+0000",
+            "premiumStreamingOnly": false,
+            "trackNumber": 3,
+            "volumeNumber": 1,
+            "version": null,
+            "popularity": 3,
+            "copyright": "2007 The All Blacks B.V. Issued under license to Roadrunner Records from the The All Blacks B.V.",
+            "url": "http://www.tidal.com/track/68574407",
+            "isrc": "NLA321392927",
+            "editable": false,
+            "explicit": false,
+            "audioQuality": "HI_RES",
+            "audioModes": [
+                "STEREO"
+            ],
+            "artist": {
+                "id": 14670,
+                "name": "Dream Theater",
+                "type": "MAIN"
+            },
+            "artists": [
+                {
+                    "id": 14670,
+                    "name": "Dream Theater",
+                    "type": "MAIN"
+                }
+            ],
+            "album": {
+                "id": 68574404,
+                "title": "Systematic Chaos",
+                "cover": "917750da-8637-4341-a9c1-8d411300c46e",
+                "videoCover": null
+            }
+        },
+        {
+            "id": 68574408,
+            "title": "The Dark Eternal Night",
+            "duration": 533,
+            "replayGain": -6.99,
+            "peak": 0.98056,
+            "allowStreaming": true,
+            "streamReady": true,
+            "streamStartDate": "2014-06-02T00:00:00.000+0000",
+            "premiumStreamingOnly": false,
+            "trackNumber": 4,
+            "volumeNumber": 1,
+            "version": null,
+            "popularity": 4,
+            "copyright": "2007 The All Blacks B.V. Issued under license to Roadrunner Records from the The All Blacks B.V.",
+            "url": "http://www.tidal.com/track/68574408",
+            "isrc": "NLA321392928",
+            "editable": false,
+            "explicit": false,
+            "audioQuality": "HI_RES",
+            "audioModes": [
+                "STEREO"
+            ],
+            "artist": {
+                "id": 14670,
+                "name": "Dream Theater",
+                "type": "MAIN"
+            },
+            "artists": [
+                {
+                    "id": 14670,
+                    "name": "Dream Theater",
+                    "type": "MAIN"
+                }
+            ],
+            "album": {
+                "id": 68574404,
+                "title": "Systematic Chaos",
+                "cover": "917750da-8637-4341-a9c1-8d411300c46e",
+                "videoCover": null
+            }
+        },
+        {
+            "id": 68574409,
+            "title": "Repentance",
+            "duration": 643,
+            "replayGain": -6.99,
+            "peak": 0.918578,
+            "allowStreaming": true,
+            "streamReady": true,
+            "streamStartDate": "2014-06-02T00:00:00.000+0000",
+            "premiumStreamingOnly": false,
+            "trackNumber": 5,
+            "volumeNumber": 1,
+            "version": null,
+            "popularity": 3,
+            "copyright": "2007 The All Blacks B.V. Issued under license to Roadrunner Records from the The All Blacks B.V.",
+            "url": "http://www.tidal.com/track/68574409",
+            "isrc": "NLA321392929",
+            "editable": false,
+            "explicit": false,
+            "audioQuality": "HI_RES",
+            "audioModes": [
+                "STEREO"
+            ],
+            "artist": {
+                "id": 14670,
+                "name": "Dream Theater",
+                "type": "MAIN"
+            },
+            "artists": [
+                {
+                    "id": 14670,
+                    "name": "Dream Theater",
+                    "type": "MAIN"
+                }
+            ],
+            "album": {
+                "id": 68574404,
+                "title": "Systematic Chaos",
+                "cover": "917750da-8637-4341-a9c1-8d411300c46e",
+                "videoCover": null
+            }
+        },
+        {
+            "id": 68574410,
+            "title": "Prophets of War",
+            "duration": 360,
+            "replayGain": -6.99,
+            "peak": 0.976715,
+            "allowStreaming": true,
+            "streamReady": true,
+            "streamStartDate": "2014-06-02T00:00:00.000+0000",
+            "premiumStreamingOnly": false,
+            "trackNumber": 6,
+            "volumeNumber": 1,
+            "version": null,
+            "popularity": 2,
+            "copyright": "2007 The All Blacks B.V. Issued under license to Roadrunner Records from the The All Blacks B.V.",
+            "url": "http://www.tidal.com/track/68574410",
+            "isrc": "NLA321392930",
+            "editable": false,
+            "explicit": false,
+            "audioQuality": "HI_RES",
+            "audioModes": [
+                "STEREO"
+            ],
+            "artist": {
+                "id": 14670,
+                "name": "Dream Theater",
+                "type": "MAIN"
+            },
+            "artists": [
+                {
+                    "id": 14670,
+                    "name": "Dream Theater",
+                    "type": "MAIN"
+                }
+            ],
+            "album": {
+                "id": 68574404,
+                "title": "Systematic Chaos",
+                "cover": "917750da-8637-4341-a9c1-8d411300c46e",
+                "videoCover": null
+            }
+        },
+        {
+            "id": 68574411,
+            "title": "The Ministry of Lost Souls",
+            "duration": 897,
+            "replayGain": -6.99,
+            "peak": 0.987793,
+            "allowStreaming": true,
+            "streamReady": true,
+            "streamStartDate": "2014-06-02T00:00:00.000+0000",
+            "premiumStreamingOnly": false,
+            "trackNumber": 7,
+            "volumeNumber": 1,
+            "version": null,
+            "popularity": 3,
+            "copyright": "2007 The All Blacks B.V. Issued under license to Roadrunner Records from the The All Blacks B.V.",
+            "url": "http://www.tidal.com/track/68574411",
+            "isrc": "NLA321392931",
+            "editable": false,
+            "explicit": false,
+            "audioQuality": "HI_RES",
+            "audioModes": [
+                "STEREO"
+            ],
+            "artist": {
+                "id": 14670,
+                "name": "Dream Theater",
+                "type": "MAIN"
+            },
+            "artists": [
+                {
+                    "id": 14670,
+                    "name": "Dream Theater",
+                    "type": "MAIN"
+                }
+            ],
+            "album": {
+                "id": 68574404,
+                "title": "Systematic Chaos",
+                "cover": "917750da-8637-4341-a9c1-8d411300c46e",
+                "videoCover": null
+            }
+        },
+        {
+            "id": 68574412,
+            "title": "In the Presence of Enemies, Pt. 2",
+            "duration": 998,
+            "replayGain": -6.99,
+            "peak": 0.957549,
+            "allowStreaming": true,
+            "streamReady": true,
+            "streamStartDate": "2014-06-02T00:00:00.000+0000",
+            "premiumStreamingOnly": false,
+            "trackNumber": 8,
+            "volumeNumber": 1,
+            "version": null,
+            "popularity": 3,
+            "copyright": "2007 The All Blacks B.V. Issued under license to Roadrunner Records from the The All Blacks B.V.",
+            "url": "http://www.tidal.com/track/68574412",
+            "isrc": "NLA321392932",
+            "editable": false,
+            "explicit": false,
+            "audioQuality": "HI_RES",
+            "audioModes": [
+                "STEREO"
+            ],
+            "artist": {
+                "id": 14670,
+                "name": "Dream Theater",
+                "type": "MAIN"
+            },
+            "artists": [
+                {
+                    "id": 14670,
+                    "name": "Dream Theater",
+                    "type": "MAIN"
+                }
+            ],
+            "album": {
+                "id": 68574404,
+                "title": "Systematic Chaos",
+                "cover": "917750da-8637-4341-a9c1-8d411300c46e",
+                "videoCover": null
+            }
+        }
+    ]
+}

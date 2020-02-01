@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 using TidalUSDK.Entities;
 using TidalUSDK.Utilities;
@@ -24,5 +25,13 @@ namespace TidalUSDK.Responses
 
         [JsonProperty("topHit")]
         public TidalTopHit TopHit { get; set; }
+
+        [JsonIgnore]
+        public bool HasResults =>
+            Artists.HasResults
+            || Albums.HasResults
+            || Tracks.HasResults
+            || Playlists.HasResults
+            || Videos.HasResults;
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 
 namespace TidalUSDK.Responses
@@ -16,5 +17,8 @@ namespace TidalUSDK.Responses
 
         [JsonProperty("items")]
         public virtual IEnumerable<T> Items { get; set; }
+
+        [JsonIgnore]
+        public bool HasResults => Items.Any();
     }
 }

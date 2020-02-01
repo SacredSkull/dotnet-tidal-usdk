@@ -12,6 +12,8 @@ namespace TidalTests.Enums
         public static string TopPlaylist => "TopPlaylist";
         public static string TopVideo => "TopVideo";
         public static string Track => "Track";
+        public static string Album => "Album";
+        public static string AlbumTracks => "AlbumTracks";
         public static string Search => "Search";
 
         //

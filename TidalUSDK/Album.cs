@@ -32,7 +32,8 @@ namespace TidalUSDK
             }
             catch (JsonException e)
             {
-                throw new HttpRequestException($"The JSON returned by TIDAL for retrieving album '{albumId}' does not appear to be valid. {e.Message}");
+                throw new HttpRequestException(
+                    $"The JSON returned by TIDAL for retrieving album '{albumId}' does not appear to be valid. {e.Message}");
             }
         }
 
@@ -56,7 +57,8 @@ namespace TidalUSDK
             }
             catch (JsonException e)
             {
-                throw new HttpRequestException($"The JSON returned by TIDAL for retrieving artist '{albumId}' does not appear to be valid. {e.Message}");
+                throw new HttpRequestException(
+                    $"The JSON returned by TIDAL for retrieving artist '{albumId}' does not appear to be valid. {e.Message}");
             }
         }
     }
