@@ -13,6 +13,8 @@ namespace TidalTests.Enums
         public static string TopVideo => "TopVideo";
         public static string Track => "Track";
         public static string Album => "Album";
+        public static string Artist => "Artist";
+        public static string ArtistVideos => "ArtistVideos";
         public static string AlbumTracks => "AlbumTracks";
         public static string Search => "Search";
 
@@ -26,5 +28,12 @@ namespace TidalTests.Enums
         public static string TopPlaylistEmpty => "TopPlaylistEmpty";
         public static string TopVideoEmpty => "TopVideoEmpty";
         public static string SearchEmpty => "SearchEmpty";
+
+        //
+        // Invalid data
+        //
+        public static string TopMissingType => "TopMissingType";
+        public static string TopMissingValue => "TopMissingValue";
+        public static string TopUnknownType => "TopUnknownType";
     }
 }
