@@ -1,7 +1,7 @@
+using System;
 using Newtonsoft.Json;
 using NUnit.Framework;
-using TidalTest;
-using TidalTest.Enums;
+using TidalTests.Enums;
 using TidalUSDK.Entities;
 using TidalUSDK.Enums;
 
@@ -160,6 +160,24 @@ namespace TidalTests
             Assert.That(() => topResult.TopTrack, Throws.InvalidOperationException);
 
             Assert.Null(topResult.TopVideo);
+        }
+
+        [Test]
+        public void Test_Invalid_MissingType()
+        {
+            Assert.Throws<JsonException>(() => AcquireTestTopResult(TestJSONFileNames.TopMissingType, TidalResultTypes.VIDEOS));
+        }
+
+        [Test]
+        public void Test_Invalid_MissingValue()
+        {
+            Assert.Throws<JsonException>(() => AcquireTestTopResult(TestJSONFileNames.TopMissingValue, TidalResultTypes.VIDEOS));
+        }
+
+        [Test]
+        public void Test_Invalid_UnknownType()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => AcquireTestTopResult(TestJSONFileNames.TopUnknownType, TidalResultTypes.VIDEOS));
         }
     }
 }

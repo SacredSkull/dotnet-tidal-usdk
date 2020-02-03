@@ -5,7 +5,7 @@ using TidalUSDK.Responses;
 
 namespace TidalTests
 {
-    public class BaseHttpTest : BaseTest
+    public abstract class BaseHttpTest : BaseTest
     {
         protected HttpTest HttpTest;
         protected TidalClient Client;

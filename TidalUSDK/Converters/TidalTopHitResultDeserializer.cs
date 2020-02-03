@@ -22,6 +22,11 @@ namespace TidalUSDK.Converters
         public override TidalTopHit ReadJson(JsonReader reader, Type objectType, TidalTopHit existingValue,
             bool hasExistingValue, JsonSerializer serializer)
         {
+            if (reader.TokenType == JsonToken.Null)
+            {
+                return null;
+            }
+
             JObject token = JObject.Load(reader);
 
             // We need a value and type to work with, if these are missing we cannot create the relevant subtype.

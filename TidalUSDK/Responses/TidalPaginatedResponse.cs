@@ -1,9 +1,10 @@
 using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 
 namespace TidalUSDK.Responses
 {
-    public abstract class TidalPaginatedResponse<T>
+    public class TidalPaginatedResponse<T>
     {
         [JsonProperty("limit")]
         public virtual int Limit { get; set; }
@@ -16,5 +17,8 @@ namespace TidalUSDK.Responses
 
         [JsonProperty("items")]
         public virtual IEnumerable<T> Items { get; set; }
+
+        [JsonIgnore]
+        public bool HasResults => Items.Any();
     }
 }

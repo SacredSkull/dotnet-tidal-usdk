@@ -8,6 +8,10 @@ namespace TidalUSDK.Constants
         ///     Base address.
         /// </summary>
         public static readonly Uri BaseAPI = new Uri("https://api.tidalhifi.com/v1/");
+
+        /// <summary>
+        /// Resources (e.g. images - does not need any auth)
+        /// </summary>
         public static readonly Uri ResourceRoot = new Uri("https://resources.tidal.com");
         public static readonly TidalUrls Origin = new TidalUrls("http://listen.tidal.com");
 

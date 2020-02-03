@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 
 namespace TidalUSDK.Entities
@@ -70,6 +71,8 @@ namespace TidalUSDK.Entities
         //public IEnumerable<TidalSurround> SurroundTypes { get; set; }
 
         [JsonProperty("artists")]
-		public IEnumerable<TidalNestedArtist> Artists { get; set; }
+		public IEnumerable<TidalNestedArtist> ArtistIds { get; set; }
+
+		[JsonIgnore] public TidalNestedArtist MainArtist => ArtistIds.FirstOrDefault(artist => artist.Type == "MAIN");
     }
 }

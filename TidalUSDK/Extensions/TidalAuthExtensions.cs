@@ -11,8 +11,8 @@ namespace TidalUSDK.Extensions
         {
             return url.WithHeaders(new Dictionary<string, string>
             {
-                {TidalHeaders.Origin, TidalUrls.Origin.ToString()},
-                {TidalHeaders.SessionId, sessionId}
+                { TidalHeaders.Origin, TidalUrls.Origin.ToString() },
+                { TidalHeaders.SessionId, sessionId }
             });
         }
     }

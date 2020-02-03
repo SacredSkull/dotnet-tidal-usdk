@@ -1,0 +1,33 @@
+{
+    "artists": {
+        "limit": 25,
+        "offset": 0,
+        "totalNumberOfItems": 0,
+        "items": []
+    },
+    "albums": {
+        "limit": 25,
+        "offset": 0,
+        "totalNumberOfItems": 0,
+        "items": []
+    },
+    "playlists": {
+        "limit": 25,
+        "offset": 0,
+        "totalNumberOfItems": 0,
+        "items": []
+    },
+    "tracks": {
+        "limit": 25,
+        "offset": 0,
+        "totalNumberOfItems": 0,
+        "items": []
+    },
+    "videos": {
+        "limit": 25,
+        "offset": 0,
+        "totalNumberOfItems": 0,
+        "items": []
+    },
+    "topHit": null
+}
