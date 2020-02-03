@@ -17,9 +17,22 @@ namespace TidalTests
         }
 
         [Test]
+        public void PathSegmentWithOneSlashTest()
+        {
+            var result = StringExtensions.JoinPathSegments("should/", "be", "joined");
+
+            Assert.False(result.StartsWith('/'));
+            Assert.AreEqual('/', result[6]);
+            Assert.AreNotEqual('/', result[7]);
+            Assert.AreEqual('/', result[9]);
+            Assert.AreNotEqual('/', result[10]);
+            Assert.False(result.EndsWith('/'));
+        }
+
+        [Test]
         public void PathSegmentWithSlashesTest()
         {
-            var result = StringExtensions.JoinPathSegments("should/", "be/", "joined");
+            var result = StringExtensions.JoinPathSegments("should/", "/be", "joined");
 
             Assert.False(result.StartsWith('/'));
             Assert.AreEqual('/', result[6]);

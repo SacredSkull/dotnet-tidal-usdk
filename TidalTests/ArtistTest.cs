@@ -34,10 +34,36 @@ namespace TidalTests
         }
 
         [Test]
+        public async Task GetArtistBioTest()
+        {
+            HttpTest.RespondWithJsonStub(TestJSONFileNames.ArtistBio);
+
+            var artistBio = await Client.GetArtistBioAsync("1234");
+
+            Assert.NotNull(artistBio);
+            Assert.True(artistBio.Text.StartsWith("Vito"));
+        }
+
+
+        [Test]
+        public void GetInvalidArtistVideosTest()
+        {
+            HttpTest.RespondWithJsonString("asd{}");
+            Assert.ThrowsAsync<HttpRequestException>(async () => await Client.GetArtistVideosAsync("1234"));
+        }
+
+        [Test]
         public void GetInvalidArtistTest()
         {
             HttpTest.RespondWithJsonString("asd{}");
             Assert.ThrowsAsync<HttpRequestException>(async () => await Client.GetArtistAsync("1234"));
+        }
+
+        [Test]
+        public void GetInvalidArtistBioTest()
+        {
+            HttpTest.RespondWithJsonString("asd{}");
+            Assert.ThrowsAsync<HttpRequestException>(async () => await Client.GetArtistBioAsync("1234"));
         }
     }
 }

@@ -14,6 +14,7 @@ namespace TidalTests.Enums
         public static string Track => "Track";
         public static string Album => "Album";
         public static string Artist => "Artist";
+        public static string ArtistBio => "ArtistBio";
         public static string ArtistVideos => "ArtistVideos";
         public static string AlbumTracks => "AlbumTracks";
         public static string Search => "Search";
