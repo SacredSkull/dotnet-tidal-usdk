@@ -3,8 +3,8 @@
 <img src="https://github.com/SacredSkull/dotnet-tidal-usdk/workflows/develop/badge.svg" />
 
 ### Install with your favourite package manager
-![<img src="https://img.shields.io/nuget/vpre/TidalUSDK?label=nuget%20%28pre-release%29" />](https://www.nuget.org/packages/TidalUSDK/)
-![<img src="https://img.shields.io/nuget/vpre/TidalUSDK?label=nuget%20%28pre-release%29" />](https://www.nuget.org/packages/TidalUSDK/)
+[<img src="https://img.shields.io/nuget/vpre/TidalUSDK?label=nuget%20%28pre-release%29" />](https://www.nuget.org/packages/TidalUSDK/)
+[<img src="https://img.shields.io/nuget/vpre/TidalUSDK?label=nuget%20%28pre-release%29" />](https://www.nuget.org/packages/TidalUSDK/)
 
 ## About
 This library aims to enable developers to write applications (e.g. media clients) that interact with _TIDAL_, providing audio stream URIs, metadata, etc.
