@@ -1,11 +1,13 @@
-name: develop
+name: develop-build-test-publish
 
 on:
   push:
     branches:
       - develop
     paths-ignore:
-      - '*.md'
+      - '**.md'
+      - '**.html'
+      - 'docs/**'
 
 jobs:
   build-test-release-ubuntu:
