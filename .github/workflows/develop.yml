@@ -24,6 +24,8 @@ jobs:
         MSBUILDSINGLELOADCONTEXT: 1 
     - name: Unit tests
       run: cd TidalTests && dotnet test --collect:"XPlat Code Coverage" -r coverage --settings test.runsettings
+      env:
+        MSBUILDSINGLELOADCONTEXT: 1
     - name: Prep coverage
       run: mv TidalTests/coverage/**/*.xml .
     - name: Download Codacy
@@ -36,6 +38,8 @@ jobs:
         CODACY_PROJECT_TOKEN: ${{ secrets.CodacyProjectToken }}
     - name: Pack release
       run: dotnet pack -c Release TidalUSDK
+      env:
+        MSBUILDSINGLELOADCONTEXT: 1
     - uses: actions/upload-artifact@master
       with:
         name: TidalUSDK-release

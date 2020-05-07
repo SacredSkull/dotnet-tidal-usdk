@@ -12,9 +12,11 @@ jobs:
     - name: Build
       run: dotnet build -c Release -v minimal
       env:
-        MSBUILDSINGLELOADCONTEXT: 1 
+        MSBUILDSINGLELOADCONTEXT: 1
     - name: Unit tests
       run: cd TidalTests && dotnet test --collect:"XPlat Code Coverage" -r coverage --settings test.runsettings
+      env:
+        MSBUILDSINGLELOADCONTEXT: 1
     - name: Prep coverage
       run: mv TidalTests/coverage/**/*.xml .
     - name: Download Codacy
@@ -37,3 +39,5 @@ jobs:
         uses: actions/setup-dotnet@v1
       - name: Unit Tests
         run: dotnet test
+      env:
+        MSBUILDSINGLELOADCONTEXT: 1
