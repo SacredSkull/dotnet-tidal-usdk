@@ -13,7 +13,7 @@ namespace TidalUSDK.Converters
         public override IFormattable ReadJson(JsonReader reader, Type objectType, IFormattable existingValue, bool hasExistingValue,
             JsonSerializer serializer)
         {
-            throw new NotImplementedException();
+            return reader.Value as IFormattable;
         }
     }
 }

@@ -95,7 +95,14 @@ namespace TidalTest
             var album = await tidalClient.GetAlbumAsync(albumId);
             var albumTracks = await tidalClient.GetAlbumTracksAsync(albumId);
 
-            var videoId = artistVideos.Items.First().Id;
+            var videoSearch = await tidalClient.SearchAsync(
+                "Love",
+                new[]
+                {
+                    TidalQueryTypes.Videos
+                },
+                1);
+            var videoId = videoSearch.Videos.Items.First().Id;
             var video = await tidalClient.GetVideoAsync(videoId);
             var userId = tidalClient.GetCurrentUserId();
 
@@ -106,6 +113,7 @@ namespace TidalTest
 
             var favTrack = favouriteTracks.Items.First().Item;
             Console.WriteLine($"Deleting {favTrack.Title} by {favTrack.Artists.First().Name}");
+            await tidalClient.GetTrackStreamingURLAsync(favTrack.Id, TidalStreamingQualityEnum.HIGH);
             await tidalClient.RemoveTrackFromMyLibraryAsync(favTrack.Id);
 
             Console.WriteLine($"...And now putting it back again.");
