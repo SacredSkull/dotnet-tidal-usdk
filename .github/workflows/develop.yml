@@ -21,6 +21,7 @@ jobs:
       run: dotnet build -c Release -v minimal
       env:
         DOTNET_CLI_TELEMETRY_OPTOUT: 1
+        MSBUILDSINGLELOADCONTEXT: 1 
     - name: Unit tests
       run: cd TidalTests && dotnet test --collect:"XPlat Code Coverage" -r coverage --settings test.runsettings
     - name: Prep coverage

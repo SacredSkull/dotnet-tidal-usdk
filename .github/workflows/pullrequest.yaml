@@ -11,6 +11,8 @@ jobs:
       uses: actions/setup-dotnet@v1
     - name: Build
       run: dotnet build -c Release -v minimal
+      env:
+        MSBUILDSINGLELOADCONTEXT: 1 
     - name: Unit tests
       run: cd TidalTests && dotnet test --collect:"XPlat Code Coverage" -r coverage --settings test.runsettings
     - name: Prep coverage
