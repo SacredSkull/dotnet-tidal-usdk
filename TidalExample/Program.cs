@@ -78,11 +78,11 @@ namespace TidalTest
                 1);
             var playlistId = playlistSearch.Playlists.Items.First().Id;
             var playlist = await tidalClient.GetPlaylistAsync(playlistId);
-            var playlistTracks = await tidalClient.GetPlaylistTracksAsync(playlistId);
 
             var myPlaylists = await tidalClient.GetMyPlaylistsAsync();
             var myPlaylistId = myPlaylists.Items.First().Item.Id;
             var playlistRecommendations = await tidalClient.GetPlaylistRecommendationsAsync(myPlaylistId);
+            var playlistTracks = await tidalClient.GetPlaylistTracksAsync(myPlaylistId);
 
             var albumSearch = await tidalClient.SearchAsync(
                 "Systematic Chaos",
