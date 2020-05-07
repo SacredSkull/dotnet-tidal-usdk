@@ -63,3 +63,4 @@ jobs:
       run: dotnet test
       env:
         DOTNET_CLI_TELEMETRY_OPTOUT: 1
+        MSBUILDSINGLELOADCONTEXT: 1
